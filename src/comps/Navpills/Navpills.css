@@ -1,0 +1,32 @@
+.Navpills {
+    background-color: var(--secondary);
+    grid-column: 2/-1;
+    grid-row: 2/span 1;
+    border-top: 1px solid var(--lightGrey);
+    border-bottom: 1px solid var(--lightGrey);
+    padding: .75rem 1.5rem;
+    margin-right: 0;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    position: relative;
+}
+.Navpills::-webkit-scrollbar {
+    display: none;
+}
+.navpills-before-curtain {
+    background-color: var(--secondary);
+    padding: .6rem 0;
+    min-width: 3rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 0px 12px 20px var(--secondary);
+    position: sticky;
+    left: -1.5rem;
+}
+.chip:hover {
+    background-color: var(--mild-grey);
+}

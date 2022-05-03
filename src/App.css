@@ -1,0 +1,24 @@
+@import url('./styles//colors.css');
+
+.App {
+    text-align: center;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 2fr;
+    grid-template-columns: auto 1fr;
+    color: white;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: var(--primary);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--light-grey-scrollbar);
+    border-radius: 5px;
+    filter: none;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--dark-grey-scrollbar);
+}

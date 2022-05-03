@@ -1,0 +1,21 @@
+.Home {
+    background-color: var(--primary);
+    grid-column: 2/-1;
+    grid-row: 3/-1;
+    padding: 1.5rem;
+    position: relative;
+    overflow: scroll;
+}
+.videos-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 2.5rem;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}

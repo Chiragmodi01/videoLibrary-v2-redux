@@ -1,0 +1,26 @@
+.FooterNav {
+    background-color: var(--secondary);
+    height: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    height: max-content;
+    width: 100%;
+}
+.footerNav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.footerNav-menu {
+    align-items: center;
+    justify-content: flex-start;
+    width: 11rem;
+    gap: 5px;
+    padding: .7rem 1.5rem;
+    flex-direction: column;
+}
+.sidebar-menu:hover {
+    background-color: var(--lightGrey);
+}
