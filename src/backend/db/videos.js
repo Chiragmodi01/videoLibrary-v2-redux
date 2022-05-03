@@ -11,7 +11,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -22,7 +22,7 @@ export const videos = [
     title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Achina Mayya",
+    channel: "Cucumber",
     timesAgo: "19 days ago",
     timeLength: "19.26",
     views: "27k views"
@@ -33,7 +33,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -44,7 +44,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -55,7 +55,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -66,7 +66,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -77,7 +77,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -88,7 +88,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -99,7 +99,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -110,7 +110,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -121,7 +121,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -132,7 +132,7 @@ export const videos = [
     title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Achina Mayya",
+    channel: "Cucumber",
     timesAgo: "19 days ago",
     timeLength: "19.26",
     views: "27k views"
@@ -143,7 +143,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -154,7 +154,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -165,7 +165,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -176,7 +176,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -187,7 +187,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -198,7 +198,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -209,7 +209,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -220,7 +220,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -231,7 +231,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -242,7 +242,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -253,7 +253,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -264,7 +264,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -275,7 +275,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
@@ -286,7 +286,7 @@ export const videos = [
     title: "Awesome Video about Coding",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "Varun Mayya",
+    channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
     views: "9.4k views"
