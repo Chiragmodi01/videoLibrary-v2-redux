@@ -8,6 +8,8 @@ function MainProvider({ children }) {
     const [hideMenu, setHideMenu] = useState(false);
     const [loading, setLoading] = useState(false);
     const [onMobile, setOnMobile] = useState(false);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [lightTheme, setLightTheme] = useState(false);
 
     window.addEventListener('resize', MatchMedia);
 
@@ -52,7 +54,7 @@ function MainProvider({ children }) {
     })    
 
     return (
-        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile}}>
+        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme}}>
             {children}
         </MainContext.Provider>
     )

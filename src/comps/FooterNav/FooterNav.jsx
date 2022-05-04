@@ -28,4 +28,4 @@ function FooterNav() {
   )
 }
 
-export default FooterNav
+export {FooterNav}

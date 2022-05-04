@@ -10,8 +10,19 @@
 .nav-left {
     gap: 1rem;
 }
+.nav-right {
+    gap: 1rem;
+    position: relative;
+}
+.settings-dropdown {
+    position: absolute;
+    bottom: -6rem;
+    left: -15rem;
+    z-index: 2;
+}
 .brand {
     font-size: 1.2rem;
+    color: var(--white);
 }
 .search-wrapper {
     height: 100%;
@@ -30,7 +41,7 @@
     padding: .7rem .4em;
     display: flex;
     flex-shrink: 1;
-    width: 30rem;
+    width: 32rem;
 }
 .search-input:focus {
     border-color: var(--blue);
@@ -39,11 +50,36 @@
     border-radius: 100%;
     padding: .4rem;
 }
+.icon-dots {
+    border-radius: 100%;
+    padding: 0.4rem;
+}
+.icon-dots:hover {
+    background-color: var(--lightGrey); 
+}
+.icon-search, .icon-dots, .ham-icon {
+    color: var(--white);
+}
 .ham-icon:hover {
     background-color: var(--lightGrey);
 }
 .user-img {
     border-radius: 100%;
+}
+
+.dropdown-menu {
+    box-sizing: border-box;
+    width: 100%;
+}
+.dropdown-menu .menu-item {
+    padding: .5rem 1rem;
+    gap: 1rem;
+}
+.dropdown-menu .menu-item:hover {
+    background-color: var(--lightGrey);
+}
+.dropdown-menu .menu-item-content {
+    width: 100%;
 }
 
 @media screen and (max-width: 780px) {

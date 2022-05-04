@@ -1,7 +1,6 @@
 import React from 'react'
-import Video from '../../comps/Video/Video';
 import { useMain } from '../../helpers/context/main-context'
-import TempCard from '../../comps/TempCard/TempCard'
+import {TempCard, Video} from '../../comps/index'
 import './Home.css'
 
 function Home() {
@@ -27,4 +26,4 @@ function Home() {
   )
 }
 
-export default Home
+export {Home}

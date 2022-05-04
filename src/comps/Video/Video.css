@@ -57,6 +57,7 @@
     line-height: 1.15rem;
     font-size: 1rem;
     height: 100%;
+    color: var(--white);
 }
 .video-footer-bottom {
     grid-column: 2/-1;

@@ -13,4 +13,4 @@ const StyledChip = styled.div`
     `}
 `
 
-export default StyledChip
+export {StyledChip}

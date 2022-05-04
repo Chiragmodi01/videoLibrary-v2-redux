@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navpills.css'
-import StyledChip from '../../styledComps/StyledChip'
+import {StyledChip} from '../../styledComps/index'
 
 import {IoIosArrowBack} from 'react-icons/io';
 
@@ -33,4 +33,4 @@ function Navpills() {
   )
 }
 
-export default Navpills
+export {Navpills}
