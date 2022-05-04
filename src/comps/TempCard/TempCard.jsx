@@ -1,7 +1,7 @@
 import React from 'react'
 import './TempCard.css';
                
-function Video() {
+function TempCard() {
   return (
     <div className='tempCard-container flex-centered'>
         <div className="tempCard-header"></div>
@@ -16,4 +16,4 @@ function Video() {
   )
 }
 
-export default Video
+export {TempCard}

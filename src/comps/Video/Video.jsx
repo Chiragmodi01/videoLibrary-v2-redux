@@ -26,4 +26,4 @@ function Video({thumbnail, title, channel, timesAgo, timeLength, views}) {
   )
 }
 
-export default Video
+export {Video}

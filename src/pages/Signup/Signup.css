@@ -1,0 +1,52 @@
+.Signup {
+    width: 100%;
+    background-color: var(--primary);
+    height: 91vh;
+}
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.change-form-text {
+    font-size: .9rem;
+}
+.form-login-btn{
+    color: var(--blue);
+}
+.form-submit {
+    width: 21rem;
+    padding: .5rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--lightGrey);
+    color: var(--white);
+}
+.form-submit:hover {
+    background-color: var(--lightGrey);
+}
+.form-fields {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.form-label {
+    position: relative;
+}
+.form-label-span {
+    position: absolute;
+    top: -.5rem;
+    left: .7rem;
+    background-color: var(--primary);
+}
+.form-input {
+    border: 1px solid var(--lightGrey);
+    background-color: transparent;
+    padding: 5px 7px;
+    width: 20rem;
+    height: 4vh;
+    outline: none;
+    color: var(--white)
+;}
+.form-input:focus {
+    border-color: var(--blue);
+}

@@ -1,4 +1,4 @@
-@import url('./styles//colors.css');
+@import url('./styles/colors.css');
 
 .App {
     text-align: center;
@@ -10,6 +10,25 @@
     overflow: hidden;
 }
 
+.App.light {
+    --primary: #ffffff;
+    --secondary: #f9f9f9;
+    --lightGrey: #e5e5e5;
+    --white: #121212;
+    /* --light-grey-scrollbar: #aaaaaa;
+    --dark-grey-scrollbar: #767676;
+    --mild-grey: #4d4d4d;
+    --black: #121212;
+    --blue: #065fd4;
+    --light-blue: #3ea6ff; */
+}
+.App.light .time-length {
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
 ::-webkit-scrollbar{
     width: 0.5rem;
     background-color: var(--primary);

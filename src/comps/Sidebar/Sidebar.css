@@ -30,13 +30,25 @@
 .sidebar-menu.short .menu-icon {
     margin-bottom: 3px;
 }
+.menu-icon {
+    color: var(--white);
+}
 .sidebar-menu.short .sidebar-menu-title {
     font-size: .7rem;
 }
+.sidebar-menu-title {
+    color: var(--white);
+}
 .sidebar-menu:hover {
+    background-color: var(--lightGrey);
+}
+.sidebar-menu.active {
     background-color: var(--lightGrey);
 }
 
 .Sidebar.tiny {
     display: none;
+}
+.menu-icon.active-history {
+    stroke-width: 30px;
 }
