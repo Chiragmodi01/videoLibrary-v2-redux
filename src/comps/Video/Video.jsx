@@ -8,14 +8,16 @@ import { useLocation } from 'react-router-dom';
 
                
 function Video({video, thumbnail, title, channel, timesAgo, timeLength, views}) {
-    const {hideMenu, dispatch, userLoggedIn} = useMain();
+    const {hideMenu, dispatch, userLoggedIn, incognito} = useMain();
     const [shwoOptions, setShwoOptions] = useState(false);
 
     let {pathname} = useLocation();
 
     const videoHandler = () => {
        if(userLoggedIn) {
-          pathname === "/" && historyVideoService(dispatch, video);
+          if(!incognito) {
+              pathname === "/" && historyVideoService(dispatch, video);
+          }
        }
     }
 

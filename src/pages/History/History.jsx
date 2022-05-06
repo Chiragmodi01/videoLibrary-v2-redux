@@ -2,12 +2,12 @@ import React from 'react'
 import { Video } from '../../comps';
 import { useMain } from '../../helpers/context/main-context'
 import './History.css'
-import {FaRegTrashAlt, RiFolderHistoryLine} from '../../utils/getIcons'
+import {FaRegTrashAlt, RiFolderHistoryLine, MdFaceRetouchingOff} from '../../utils/getIcons'
 import { deleteAllFromHistory } from '../../helpers/services/deleteAllFromHistory';
 import { toast } from 'react-toastify';
 
 function History() {
-  const {state, dispatch} = useMain();
+  const {state, dispatch, incognito} = useMain();
 
   const clearHistory = () => {
     if(state.history.length !== 0) {
@@ -22,6 +22,8 @@ function History() {
   const currentDate = dateString.split(' ').slice(0, 2).join(', ');
   const currentDay = dateString = dateString.split(' ').slice(2, 3).join(' ');
 
+  const IconHistoryPlaceholder = incognito ? MdFaceRetouchingOff : RiFolderHistoryLine
+
   return (
     <div className="History">
       <div className="history-header">
@@ -35,8 +37,8 @@ function History() {
         {
         state.history.length === 0 ? 
         <div className='empty-page-placeholder flex-centered flex-col gap-4'>
-          <RiFolderHistoryLine size="10em" className='page-placeholder icon'/>
-          <h1 className='page-placeholder text'>Nothing in Watch history Yet</h1>
+          <IconHistoryPlaceholder size="10em" className='page-placeholder icon'/>
+          <h1 className='page-placeholder text'>{incognito ? 'You are browsing in Incognito mode' : 'Nothing in Watch history Yet'}</h1>
         </div> :
         <>
         <div className="history-current-day">{currentDate} {currentDay}</div>
