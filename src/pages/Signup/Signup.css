@@ -53,5 +53,5 @@
 .form-submit:disabled {
     cursor: no-drop;
     background-color: var(--lightGrey);
-    opacity: 70%;
+    opacity: .7;
 }
