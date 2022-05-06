@@ -51,9 +51,11 @@ function MainProvider({ children }) {
         fetchData();
     }, []);
 
+    
     const [state, dispatch] = useReducer(videoReducer, {
         videos: [],
         filteredVideos: [],
+        history: []
     })    
 
     return (

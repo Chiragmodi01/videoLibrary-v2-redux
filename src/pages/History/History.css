@@ -1,3 +1,63 @@
 .History {
+    width: 100%;
     background-color: var(--primary);
+    height: calc(100vh - 59.17px);
+    grid-column: 2/-1;
+    grid-row: 3/-1;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.History .videos-container {
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+.history-header {
+    border-bottom: 1px solid var(--lightGrey);
+    margin-right: 0;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.history-header-title {
+    font-size: 1rem;
+    padding: 1.5rem 1.5rem;
+    font-weight: bold;
+}
+.history-header-right {
+    background-color: var(--black);
+    color: var(--text-grey);
+    padding: 1.5rem 1.5rem;
+}
+.history-clear-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .95rem;
+}
+.empty-page-placeholder {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page-placeholder.icon {
+    color: var(--lightGrey);
+}
+.page-placeholder.text {
+    font-size: 1.3rem;
+    color: var(--text-grey);
+}
+.history-current-day {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
 }
