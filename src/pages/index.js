@@ -5,3 +5,4 @@ export {Watchlater} from './Watchlater/Watchlater';
 export {History} from './History/History';
 export {Signup} from './Signup/Signup';
 export {Login} from './Login/Login';
+export {PageNotFound} from './PageNotFound/PageNotFound';

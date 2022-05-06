@@ -10,3 +10,22 @@
     --blue: #065fd4;
     --light-blue: #3ea6ff;
 }
+
+.dark-toast {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 0 15px 0 #b2b2b2 !important;
+    line-height: 1.3rem;
+}
+.dark-toast svg {
+    color: var(--mild-grey);
+}
+
+.light-toast {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 0 15px 0 #595959 !important;
+}
+.light-toast svg {
+    color: var(--dark-green);
+}

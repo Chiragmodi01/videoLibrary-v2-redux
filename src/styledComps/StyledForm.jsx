@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledForm = styled.div`
+const StyledForm = styled.form`
     width: 25rem;
     padding: 1.5rem 1rem;
     border: 1px solid var(--lightGrey);

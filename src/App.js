@@ -1,8 +1,10 @@
 import './App.css';
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {FooterNav, Navbar, Navpills, Sidebar} from './comps/index'
-import {Home, Playlist, Liked, Watchlater, History, Signup, Login} from './pages/index';
+import {Home, Playlist, Liked, Watchlater, History, Signup, Login, PageNotFound} from './pages/index';
 import { useMain } from './helpers/context/main-context';
+import Mockman from 'mockman-js';
+import Toast from './comps/Toast/Toast';
 
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
@@ -17,25 +19,35 @@ function App() {
       setShowDropdown(false);
     }
   }
+
+    useEffect(() => {
+      localStorage.clear()
+    }, [])
   
   return (
-    <div className={lightTheme ? "App light" : "App"} onClick={closeDropdown}>
-      <Navbar toggleDropdownRef={toggleDropdownRef}/>
-      <Sidebar />
-      {pathname === '/' &&<Navpills />}
-      <FooterNav />
+    <>
+    <Toast />
+      <div className={lightTheme ? "App light" : "App"} onClick={closeDropdown}>
+        
+        <Navbar toggleDropdownRef={toggleDropdownRef}/>
+        <Sidebar />
+        {pathname === '/' &&<Navpills />}
+        <FooterNav />
 
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/playlist" element={<Playlist />}/>
-        <Route path="/liked" element={<Liked />}/>
-        <Route path="/watchlater" element={<Watchlater />}/>
-        <Route path="/history" element={<History />}/>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/signup" element={<Signup />}/>
-        {/* <Route path="/settings" element={<Settings />}/> */}
-      </Routes>
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/playlist" element={<Playlist />}/>
+          <Route path="/liked" element={<Liked />}/>
+          <Route path="/watchlater" element={<Watchlater />}/>
+          <Route path="/history" element={<History />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/signup" element={<Signup />}/>
+          <Route path="/mock" element={<Mockman />} />
+          <Route path = '*' element={<PageNotFound />} />
+          {/* <Route path="/settings" element={<Settings />}/> */}
+        </Routes>
+      </div>
+    </>
   );
 }
 

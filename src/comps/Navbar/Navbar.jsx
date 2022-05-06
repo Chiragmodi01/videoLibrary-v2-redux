@@ -1,12 +1,14 @@
 import React  from 'react'
 import './Navbar.css'
 import {useMain} from '../../helpers/context/main-context';
-import {IoIosMenu, IoSearchOutline, CgProfile, BiDotsVerticalRounded, BsMoon, BsSun, IoIosArrowForward, IoSettingsOutline} from '../../utils/getIcons';
+import {IoIosMenu, IoSearchOutline, CgProfile, BiDotsVerticalRounded, BsMoon, BsSun, IoIosArrowForward, IoSettingsOutline, AiOutlineLogout} from '../../utils/getIcons';
 import {StyledButton, StyledDropdown} from '../../styledComps/index';
 import { Link } from "react-router-dom";
+import verifyForm from '../../utils/verifyForm';
 
 function Navbar({toggleDropdownRef}) {
-  const { setHideMenu, onMobile, showDropdown, setShowDropdown, setLightTheme, lightTheme } = useMain();
+  const { setHideMenu, onMobile, showDropdown, setShowDropdown, setLightTheme, lightTheme, userSignedIn, userLoggedIn } = useMain();
+  const {logoutSubmitHandler} = verifyForm();
 
   return (
     <div className='Navbar'>
@@ -39,16 +41,23 @@ function Navbar({toggleDropdownRef}) {
                 <IoSettingsOutline size="1.4em" />
                 <p className="item-title">Settings</p>
               </li>
+              {userLoggedIn && <li className="menu-item cursor-pointer flex-centered justify-start" onClick={logoutSubmitHandler}>
+                <AiOutlineLogout size="1.4em" />
+                <p className="item-title">Logout</p>
+              </li>}
             </ul>
           </StyledDropdown>
         <div className="image-wrapper">
-          {/* <img className='user-img' src="https://i.pravatar.cc/32?img=3" alt="user-image" title="Profile"/> */}
-          <Link to="signup">
-            <StyledButton className="cursor-pointer">
-              <CgProfile size='1.6em' />
-              <h3>Sign In</h3>
-            </StyledButton>
-          </Link>
+          {
+            userLoggedIn ? 
+             <img className='user-img cursor-pointer' src="https://i.pravatar.cc/32?img=3" alt="user-image" title="Profile"/> :
+             <Link to={userSignedIn ? "login" : "signup"}>
+              <StyledButton className="cursor-pointer">
+                <CgProfile size='1.6em' />
+                <h3>{userSignedIn ? "Log In" : "Sign In"}</h3>
+              </StyledButton>
+            </Link>
+          }
         </div>
       </div>
     </div>
