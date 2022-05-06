@@ -16,7 +16,7 @@
 }
 .settings-dropdown {
     position: absolute;
-    bottom: -8rem;
+    top: 2rem;
     left: -15rem;
     z-index: 2;
 }
