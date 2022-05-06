@@ -5,7 +5,7 @@
     text-align: left;
 }
 .video-container:hover .video-thumbnail {
-    opacity: 85%;
+    opacity: 0.85;
 }
 .video-header {
     height: 8.9rem;
