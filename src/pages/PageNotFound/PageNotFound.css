@@ -1,0 +1,19 @@
+.PageNotFound {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--primary);
+    height: calc(100vh - 59.17px);
+    position: fixed;
+}
+.return-home-btn {
+    padding: .7rem 1.5rem;
+    border: 2px solid var(--lightGrey);
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1rem;
+    outline: none;
+}
+.return-home-btn:hover {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}

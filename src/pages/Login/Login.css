@@ -1,7 +1,7 @@
 .Login {
     width: 100%;
     background-color: var(--primary);
-    height: 91vh;
+    height: calc(100vh - 59.17px);
 }
 .form-title {
     font-size: 1.5rem;
@@ -49,4 +49,9 @@
 ;}
 .form-input:focus {
     border-color: var(--blue);
+}
+.form-submit:disabled {
+    cursor: no-drop;
+    background-color: var(--lightGrey);
+    opacity: 70%;
 }
