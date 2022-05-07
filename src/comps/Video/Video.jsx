@@ -22,8 +22,8 @@ function Video({video, thumbnail, title, channel, timesAgo, timeLength, views}) 
     }
 
   return (
-    <div className={hideMenu ? 'video-container big flex-centered' : 'video-container flex-centered'} onClick={videoHandler}>
-        <div className="video-header">
+    <div className={hideMenu ? 'video-container big flex-centered' : 'video-container flex-centered'}>
+        <div className="video-header" onClick={videoHandler}>
             <img src={thumbnail} className="video-thumbnail" alt="video-thumbnail" />
             <span className="time-length">{timeLength}</span>
         </div>
