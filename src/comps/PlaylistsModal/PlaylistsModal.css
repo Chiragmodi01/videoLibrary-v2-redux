@@ -1,0 +1,43 @@
+.PlaylistsModal {
+    background-color: #18181873;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.modal-wrapper {
+    background-color: var(--secondary);
+    border: 1px solid var(--lightGrey);
+    padding: .8rem .5rem;
+    width: 17rem;
+    gap: 1rem;
+    color: var(--white);
+    align-items: flex-start;
+}
+.modal-input {
+    background-color: var(--primary);
+    border: 1px solid var(--lightGrey);
+    padding: .5rem 5px;
+    font-size: .9rem;
+    outline: none;
+    width: 100%;
+}
+.modal-top {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+.modal-main {
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+.icon-add {
+    position: absolute;
+    right: 5px;
+}
+.icon-add, .icon-close {
+    color: var(--white);
+}

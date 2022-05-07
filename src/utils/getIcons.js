@@ -1,10 +1,11 @@
 export {IoIosMenu, IoIosArrowForward} from 'react-icons/io';
 export {IoSearchOutline} from 'react-icons/io5';
 export {AiFillHome, AiOutlineHome, AiFillClockCircle, AiOutlineClockCircle, AiOutlineHistory, AiOutlineLogout} from 'react-icons/ai';
-export {RiThumbUpFill, RiThumbUpLine, RiFolderHistoryLine} from 'react-icons/ri';
+export {RiThumbUpFill, RiThumbUpLine, RiFolderHistoryLine, RiPlayList2Fill} from 'react-icons/ri';
 export {MdVideoLibrary, MdOutlineVideoLibrary, MdFaceRetouchingOff, MdFace} from 'react-icons/md';
 export {CgProfile, CgPlayListAdd} from 'react-icons/cg';
 export {BiDotsVerticalRounded, BiMask} from 'react-icons/bi';
 export {BsSun, BsMoon} from 'react-icons/bs';
 export {BiShare} from 'react-icons/bi';
 export {FaRegTrashAlt} from 'react-icons/fa';
+export {GrClose, GrAdd} from 'react-icons/gr';

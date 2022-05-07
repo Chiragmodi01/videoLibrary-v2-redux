@@ -14,6 +14,7 @@ function MainProvider({ children }) {
     const [userSignedIn, setUserSignedIn] = useState(false);
     const [userLoggedIn, setUserLoggedIn] = useState(false);
     const [incognito, setIncognito] = useState(false);
+    const [showPlaylistModal, setShowPlaylistModal] = useState(false);
 
     window.addEventListener('resize', MatchMedia);
 
@@ -56,11 +57,12 @@ function MainProvider({ children }) {
     const [state, dispatch] = useReducer(videoReducer, {
         videos: [],
         filteredVideos: [],
-        history: []
+        history: [],
+        playlists: []
     })    
 
     return (
-        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme, toastDelay, setToastDelay, userSignedIn, setUserSignedIn, userLoggedIn, setUserLoggedIn, incognito, setIncognito}}>
+        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme, toastDelay, setToastDelay, userSignedIn, setUserSignedIn, userLoggedIn, setUserLoggedIn, incognito, setIncognito, showPlaylistModal, setShowPlaylistModal}}>
             {children}
         </MainContext.Provider>
     )
