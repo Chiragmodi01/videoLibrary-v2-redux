@@ -17,6 +17,8 @@
     --secondary: #f9f9f9;
     --lightGrey: #e5e5e5;
     --white: #121212;
+    --black: #aaaaaa7d;
+    --text-grey: #0f0f0f;
     /* --light-grey-scrollbar: #aaaaaa;
     --dark-grey-scrollbar: #767676;
     --mild-grey: #4d4d4d;
@@ -27,6 +29,20 @@
 .App.light .time-length {
     color: white;
 }
+
+.dark-toast {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 0 15px 0 #b2b2b2 !important;
+    line-height: 1.3rem;
+}
+.light-toast {
+    background: #f9f9f9;
+    color: #121212;
+    box-shadow: 0 0 15px 0 #595959 !important;
+    line-height: 1.3rem;
+}
+
 a {
     text-decoration: none;
     color: inherit;

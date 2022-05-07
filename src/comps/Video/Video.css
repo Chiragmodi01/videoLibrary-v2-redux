@@ -63,6 +63,7 @@
 }
 .video-icon-dots {
     display: none;
+    color: var(--white);
 }
 .video-container:hover .video-icon-dots {
     display: flex;

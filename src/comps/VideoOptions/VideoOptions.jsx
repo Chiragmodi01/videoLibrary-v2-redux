@@ -1,23 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './VideoOptions.css';
 import {AiOutlineClockCircle, CgPlayListAdd, BiShare, AiOutlineHistory} from '../../utils/getIcons';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { watchLaterService } from '../../helpers/services/watchLaterService';
 import { deleteWatchlaterVideo } from '../../helpers/services/deleteWatchlaterVideo';
 import { useMain } from '../../helpers/context/main-context';
+import { findVideo } from '../../utils/findVideo';
 
 function VideoOptions({video}) {
+    const {state} = useMain();
     let {pathname} = useLocation();
     let navigate = useNavigate();
     const {dispatch, userLoggedIn} = useMain();
 
+    const isVideoInWatchlater = findVideo(video._id, state.watchlater) ? true : false;
+
     const saveToWatchlater = () => {
-       {userLoggedIn ?  watchLaterService(dispatch, video) : navigate('/signup')};
+       if(userLoggedIn) {
+        watchLaterService(dispatch, video)
+       } else {
+        navigate('/signup');
+       }
     }
 
     const deleteFromWatchlater = () => {
         deleteWatchlaterVideo(dispatch, video)
     }
+
 
   return (
     <div className='videoOptions'>
@@ -25,9 +34,9 @@ function VideoOptions({video}) {
             <AiOutlineHistory className='icon-share-flip' size="1.5em" />
             <li className="videoOptions menu-item">Remove from history</li>
         </ul>}
-        <ul className="videoOptions-menu cursor-pointer" onClick={pathname === "/watchlater" ? deleteFromWatchlater : saveToWatchlater}>
+        <ul className="videoOptions-menu cursor-pointer" onClick={isVideoInWatchlater ? deleteFromWatchlater : saveToWatchlater}>
             <AiOutlineClockCircle size="1.5em" />
-            <li className="videoOptions-menu-item">{pathname === "/watchlater" ? 'Remove from Watch later' : 'Save to Watch later'}</li>
+            <li className="videoOptions-menu-item">{isVideoInWatchlater ? 'Remove from Watch later' : 'Save to Watch later'}</li>
         </ul>
         <ul className="videoOptions-menu cursor-pointer">
             <CgPlayListAdd size="1.5em" />
