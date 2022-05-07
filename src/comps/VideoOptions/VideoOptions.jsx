@@ -8,21 +8,21 @@ function VideoOptions() {
 
   return (
     <div className='videoOptions'>
-       { pathname === "/history" && <ul className="videoOptions menu">
+       { pathname === "/history" && <ul className="videoOptions-menu">
             <AiOutlineHistory className='icon-share-flip' size="2em" />
             <li className="videoOptions menu-item cursor-pointer">Remove from history</li>
         </ul>}
-        <ul className="videoOptions menu">
+        <ul className="videoOptions-menu">
             <AiOutlineClockCircle size="2em" />
-            <li className="videoOptions menu-item cursor-pointer">Save to Watch later</li>
+            <li className="videoOptions-menu-item cursor-pointer">Save to Watch later</li>
         </ul>
-        <ul className="videoOptions menu">
+        <ul className="videoOptions-menu">
             <CgPlayListAdd size="2em" />
-            <li className="videoOptions menu-item cursor-pointer">Save to playlist</li>
+            <li className="videoOptions-menu-item cursor-pointer">Save to playlist</li>
         </ul>
-        <ul className="videoOptions menu">
+        <ul className="videoOptions-menu">
             <BiShare className='icon-share-flip' size="2em" />
-            <li className="videoOptions menu-item cursor-pointer">Share</li>
+            <li className="videoOptions-menu-item cursor-pointer">Share</li>
         </ul>
     </div>
   )

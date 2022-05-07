@@ -33,7 +33,7 @@ function Video({video, thumbnail, title, channel, timesAgo, timeLength, views}) 
                 <h4 className="video-title flex-centered">{title}</h4>
                 <div className="video-dots-wrapper">
                     <BiDotsVerticalRounded className='video-icon-dots cursor-pointer' size="1.5em"onClick={() => setShwoOptions(prev => !prev)}/>
-                    {shwoOptions && <VideoOptions className="videoOptions-comp" />}
+                    {shwoOptions && <VideoOptions />}
                 </div>
             </div>
             <div className="video-footer-bottom flex-centered">
