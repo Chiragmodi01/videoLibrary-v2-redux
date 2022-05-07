@@ -18,15 +18,15 @@ function Login() {
             <div className="form-fields flex-centered">
                 <label htmlFor="email" className="form-label">
                     <span className="form-label-span">Email</span>
-                    <input required value={userData.email} type="email" className="form-input" id="email" onChange={(e) => setUserData({...userData, email: e.target.value})} />
+                    <input required value={userData.email} autoComplete="on" type="email" className="form-input" id="email" onChange={(e) => setUserData({...userData, email: e.target.value})} />
                 </label>
                 <label htmlFor="password" className="form-label">
                 <span className="form-label-span">Pasword</span>
-                    <input required value={userData.password} type="password" className="form-input" id="password" onChange={(e) => setUserData({...userData, password: e.target.value})} />
+                    <input required value={userData.password} autoComplete="on" type="password" className="form-input" id="password" onChange={(e) => setUserData({...userData, password: e.target.value})} />
                 </label>
                 <label htmlFor="re-password" className="form-label">
                 <span className="form-label-span">Confirm Pasword</span>
-                    <input required value={rePassword} type="password" className="form-input" id="re-password" onChange={(e) => setRePassword(e.target.value)} />
+                    <input required value={rePassword} autoComplete="on" type="password" className="form-input" id="re-password" onChange={(e) => setRePassword(e.target.value)} />
                 </label>
             </div>
             <div className="login_buttons flex-centered flex-col gap-3">

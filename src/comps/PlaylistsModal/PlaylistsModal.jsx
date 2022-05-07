@@ -18,11 +18,11 @@ function PlaylistsModal() {
         <div className="modal-wrapper flex-centered flex-col" ref={playlistModalRef}>
             <div className='modal-top flex-centered'>
                 <h2 className="modal-top-title">Add Playlist</h2>
-                <GrClose size="1em" className='icon-close cursor-pointer' onClick={() => setShowPlaylistModal(prev => !prev)}/>
+                <GrClose color="white" size="1em" className='icon-close cursor-pointer' onClick={() => setShowPlaylistModal(prev => !prev)}/>
             </div>
             <div className="modal-main flex-centered">
                 <input type="text" className='modal-input' placeholder='Create New Playlist' />
-                <GrAdd size="1.2em" className='icon-add cursor-pointer'/>
+                <GrAdd color="white" size="1.1em" className='icon-add cursor-pointer'/>
             </div>
         </div>
     </div>
