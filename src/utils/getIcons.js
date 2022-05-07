@@ -5,7 +5,7 @@ export {RiThumbUpFill, RiThumbUpLine, RiFolderHistoryLine, RiPlayList2Fill} from
 export {MdVideoLibrary, MdOutlineVideoLibrary, MdFaceRetouchingOff, MdFace} from 'react-icons/md';
 export {CgProfile, CgPlayListAdd} from 'react-icons/cg';
 export {BiDotsVerticalRounded, BiMask} from 'react-icons/bi';
-export {BsSun, BsMoon} from 'react-icons/bs';
+export {BsSun, BsMoon, BsEyeFill, BsEyeSlashFill} from 'react-icons/bs';
 export {BiShare} from 'react-icons/bi';
 export {FaRegTrashAlt} from 'react-icons/fa';
 export {GrClose, GrAdd} from 'react-icons/gr';
