@@ -3,6 +3,7 @@
     gap: .7rem;
     width: 15.85rem;
     text-align: left;
+    position: relative;
 }
 .video-container:hover .video-thumbnail {
     opacity: 0.85;
@@ -43,7 +44,6 @@
 }
 .video-footer-top {
     overflow: hidden;
-    /* position: relative; */
     grid-column: 1/-1;
     grid-row: 1/span 1;
     gap: .7rem;
@@ -84,7 +84,4 @@
 }
 .video-container.big .video-footer-top .video-title{
     max-width: 13rem;
-}
-.video-dots-wrapper {
-    position: relative;
 }

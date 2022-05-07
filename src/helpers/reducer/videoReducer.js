@@ -7,6 +7,12 @@ const videoReducer = (state, action) => {
             return { ...state, history: action.payload }
         case'DELETE_ALL_FROM_HISTORY':
             return { ...state, history: action.payload }
+        case'WATCHLATER_VIDEO':
+            return { ...state, watchlater: action.payload }
+        case'DELETE_WATCHLATER_VIDEO':
+            return { ...state, watchlater: action.payload }
+        case'DELETE_ALL_FROM_WATCHLATER':
+            return { ...state, watchlater: action.payload }
     }
 }
 

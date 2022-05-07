@@ -58,7 +58,8 @@ function MainProvider({ children }) {
         videos: [],
         filteredVideos: [],
         history: [],
-        playlists: []
+        playlists: [],
+        watchlater: []
     })    
 
     return (

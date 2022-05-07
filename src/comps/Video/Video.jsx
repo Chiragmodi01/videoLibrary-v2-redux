@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
                
 function Video({video, thumbnail, title, channel, timesAgo, timeLength, views}) {
     const {hideMenu, dispatch, userLoggedIn, incognito} = useMain();
-    const [shwoOptions, setShwoOptions] = useState(false);
+    const [showOptions, setShowOptions] = useState(false);
 
     let {pathname} = useLocation();
 
@@ -31,16 +31,14 @@ function Video({video, thumbnail, title, channel, timesAgo, timeLength, views}) 
             <div className="video-footer-top flex-centered">
                 <img src='https://i.pravatar.cc/32?img=3' className="channel-image" alt="creator-image" />
                 <h4 className="video-title flex-centered">{title}</h4>
-                <div className="video-dots-wrapper">
-                    <BiDotsVerticalRounded className='video-icon-dots cursor-pointer' size="1.5em"onClick={() => setShwoOptions(prev => !prev)}/>
-                    {shwoOptions && <VideoOptions />}
-                </div>
+                <BiDotsVerticalRounded className='video-icon-dots cursor-pointer' size="1.5em"onClick={() => setShowOptions(prev => !prev)}/>
             </div>
             <div className="video-footer-bottom flex-centered">
                 <p className="channel-name">{channel}</p>
                 <p className="video-views">{views} • {timesAgo}</p>
             </div>
         </div>
+        {showOptions && <VideoOptions video={video} />}
     </div>
   )
 }
