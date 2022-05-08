@@ -29,4 +29,4 @@ function PlaylistsModal() {
   )
 }
 
-export default PlaylistsModal
+export {PlaylistsModal}

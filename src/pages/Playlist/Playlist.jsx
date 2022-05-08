@@ -2,7 +2,7 @@ import React from 'react'
 import './Playlist.css'
 import {CgPlayListAdd, RiPlayList2Fill} from '../../utils/getIcons';
 import { useMain } from '../../helpers/context/main-context';
-import PlaylistsModal from '../../comps/PlaylistsModal/PlaylistsModal';
+import {PlaylistsModal} from '../../comps';
 
 function Playlist() {
   const {state, showPlaylistModal, setShowPlaylistModal} = useMain();

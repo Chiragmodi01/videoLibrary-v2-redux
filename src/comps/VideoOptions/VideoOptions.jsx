@@ -7,12 +7,12 @@ import { deleteWatchlaterVideo } from '../../helpers/services/deleteWatchlaterVi
 import { deleteFromHistoryService } from '../../helpers/services/deleteFromHistoryService';
 import { useMain } from '../../helpers/context/main-context';
 import { findVideo } from '../../utils/findVideo';
+import {PlaylistsModal} from '../../comps';
 
 function VideoOptions({video}) {
-    const {state} = useMain();
+    const {state, dispatch, userLoggedIn, showPlaylistModal, setShowPlaylistModal} = useMain();
     let {pathname} = useLocation();
     let navigate = useNavigate();
-    const {dispatch, userLoggedIn} = useMain();
 
     const isVideoInWatchlater = findVideo(video._id, state.watchlater) ? true : false;
 
@@ -32,6 +32,7 @@ function VideoOptions({video}) {
         deleteFromHistoryService(dispatch, video)
     }
 
+    
 
   return (
     <div className='videoOptions'>
@@ -43,7 +44,7 @@ function VideoOptions({video}) {
             <AiOutlineClockCircle size="1.5em" />
             <li className="videoOptions-menu-item">{isVideoInWatchlater ? 'Remove from Watch later' : 'Save to Watch later'}</li>
         </ul>
-        <ul className="videoOptions-menu cursor-pointer">
+        <ul className="videoOptions-menu cursor-pointer" onClick={() => setShowPlaylistModal(prev => !prev)}>
             <CgPlayListAdd size="1.5em" />
             <li className="videoOptions-menu-item">Save to playlist</li>
         </ul>
@@ -51,6 +52,10 @@ function VideoOptions({video}) {
             <BiShare className='icon-share-flip' size="1.5em" />
             <li className="videoOptions-menu-item">Share</li>
         </ul>
+        {userLoggedIn ?
+        showPlaylistModal && <PlaylistsModal /> : 
+        navigate("/signup")
+        }
     </div>
   )
 }
