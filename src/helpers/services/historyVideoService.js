@@ -9,7 +9,7 @@ const historyVideoService = async(dispatch, video) => {
 
     try {
         const res = await axios.post(`/api/user/history/`, videoToSend, {headers: Headers});
-        dispatch({ type: "HISTORY_VIDEO", payload: res.data.history})
+        dispatch({ type: "SET_HISTORY_ARRAY", payload: res.data.history})
     } catch(e) {
         console.log(e.message)
     }

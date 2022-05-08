@@ -7,7 +7,7 @@ const deleteAllFromWatchlater = async(dispatch) => {
 
     try {
         const res = await axios.delete(`/api/user/watchlater/all`, {headers: Headers});
-        dispatch({ type: "DELETE_ALL_FROM_WATCHLATER", payload: res.data.watchlater})
+        dispatch({ type: "SET_WATCHLATER_ARRAY", payload: res.data.watchlater})
     } catch(e) {
         console.log(e.message)
     }

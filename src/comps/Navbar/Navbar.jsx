@@ -6,6 +6,7 @@ import {StyledButton, StyledDropdown} from '../../styledComps/index';
 import { Link } from "react-router-dom";
 import verifyForm from '../../utils/verifyForm';
 import {toast} from 'react-toastify';
+import {incognitoFace} from '../../assets/svgs';
 
 function Navbar({toggleDropdownRef}) {
   const { setHideMenu, onMobile, showDropdown, setShowDropdown, setLightTheme, lightTheme, userSignedIn, userLoggedIn, incognito, setIncognito } = useMain();
@@ -63,7 +64,7 @@ function Navbar({toggleDropdownRef}) {
         <div className="image-wrapper">
           {
             userLoggedIn ? 
-             <img className='user-img cursor-pointer' src="https://i.pravatar.cc/32?img=3" alt="user-image" title="Profile"/> :
+             <img className='user-img cursor-pointer' src={incognito ? incognitoFace : "https://i.pravatar.cc/32?img=3"} alt="user-image" title="Profile"/> :
              <Link to={userSignedIn ? "login" : "signup"}>
               <StyledButton className="cursor-pointer">
                 <CgProfile size='1.6em' />

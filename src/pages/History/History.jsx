@@ -35,14 +35,15 @@ function History() {
       </div>
       <div className="videos-container">
         {
-        state.history.length === 0 ? 
+        state.history.length === 0 || incognito? 
         <div className='empty-page-placeholder flex-centered flex-col gap-4'>
           <IconHistoryPlaceholder size="10em" className='page-placeholder icon'/>
           <h1 className='page-placeholder text'>{incognito ? 'You are browsing in Incognito mode' : 'Nothing in Watch history Yet'}</h1>
-        </div> :
+        </div> 
+        :
         <>
         <div className="history-current-day">{currentDate} {currentDay}</div>
-        {state.history.map((video) => {
+        {!incognito && state.history.map((video) => {
           return (
             <Video video={video} key={video._id} views={video.views} thumbnail={video.thumbnail} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
           )

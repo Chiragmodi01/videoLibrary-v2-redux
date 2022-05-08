@@ -4,6 +4,7 @@ import {AiOutlineClockCircle, CgPlayListAdd, BiShare, AiOutlineHistory} from '..
 import { useLocation, useNavigate } from 'react-router-dom';
 import { watchLaterService } from '../../helpers/services/watchLaterService';
 import { deleteWatchlaterVideo } from '../../helpers/services/deleteWatchlaterVideo';
+import { deleteFromHistoryService } from '../../helpers/services/deleteFromHistoryService';
 import { useMain } from '../../helpers/context/main-context';
 import { findVideo } from '../../utils/findVideo';
 
@@ -27,12 +28,16 @@ function VideoOptions({video}) {
         deleteWatchlaterVideo(dispatch, video)
     }
 
+    const deleteFromHistory = () => {
+        deleteFromHistoryService(dispatch, video)
+    }
+
 
   return (
     <div className='videoOptions'>
-       { pathname === "/history" && <ul className="videoOptions-menu cursor-pointer">
+       { pathname === "/history" && <ul className="videoOptions-menu cursor-pointer" onClick={deleteFromHistory}>
             <AiOutlineHistory className='icon-share-flip' size="1.5em" />
-            <li className="videoOptions menu-item">Remove from history</li>
+            <li className="videoOptions-menu-item">Remove from history</li>
         </ul>}
         <ul className="videoOptions-menu cursor-pointer" onClick={isVideoInWatchlater ? deleteFromWatchlater : saveToWatchlater}>
             <AiOutlineClockCircle size="1.5em" />

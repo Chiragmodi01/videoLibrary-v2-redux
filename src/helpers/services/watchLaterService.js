@@ -9,7 +9,7 @@ const watchLaterService = async(dispatch, video) => {
 
     try {
         const res = await axios.post(`/api/user/watchlater`, videoToSend, {headers: Headers});
-        dispatch({ type: "WATCHLATER_VIDEO", payload: res.data.watchlater})
+        dispatch({ type: "SET_WATCHLATER_ARRAY", payload: res.data.watchlater})
     } catch(e) {
         console.log(e.message)
     }

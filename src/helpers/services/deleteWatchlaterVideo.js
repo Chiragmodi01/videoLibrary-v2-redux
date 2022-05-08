@@ -7,7 +7,7 @@ const deleteWatchlaterVideo = async(dispatch, video) => {
 
     try {
         const res = await axios.delete(`/api/user/watchlater/${video._id}`, {headers: Headers});
-        dispatch({ type: "DELETE_WATCHLATER_VIDEO", payload: res.data.watchlater})
+        dispatch({ type: "SET_WATCHLATER_ARRAY", payload: res.data.watchlater})
     } catch(e) {
         console.log(e.message)
     }
