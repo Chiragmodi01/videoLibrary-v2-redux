@@ -4,12 +4,14 @@ import './Signup.css';
 import {Link} from 'react-router-dom';
 import verifyForm from '../../utils/verifyForm';
 import { useMain } from '../../helpers/context/main-context';
+import {BsEyeFill, BsEyeSlashFill} from '../../utils/getIcons'
 
 
 function Signup() {
     const { userData, setUserData, rePassword, setRePassword, submitUserData } = verifyForm();
 
-    const {userSignedIn, userLoggedIn} = useMain();
+    const {showPassword, setShowPassword} = useMain();
+    const IconShowPass = showPassword ? BsEyeFill : BsEyeSlashFill;
 
   return (
     <div className="Signup flex-centered">
@@ -18,15 +20,16 @@ function Signup() {
             <div className="form-fields flex-centered">
                 <label htmlFor="email" className="form-label">
                     <span className="form-label-span">Email</span>
-                    <input required value={userData.email} type="email" className="form-input" id="email" onChange={(e) => setUserData({...userData, email: e.target.value})} />
+                    <input required value={userData.email} autoComplete="on" type="email" className="form-input" id="email" onChange={(e) => setUserData({...userData, email: e.target.value})} />
                 </label>
                 <label htmlFor="password" className="form-label">
                     <span className="form-label-span">Pasword</span>
-                    <input required value={userData.password} type="password" className="form-input" id="password" onChange={(e) => setUserData({...userData, password: e.target.value})} />
+                    <input required value={userData.password} autoComplete="on" type={showPassword ? "text" : "password"} className="form-input" id="password" onChange={(e) => setUserData({...userData, password: e.target.value})} />
+                    <IconShowPass title={showPassword ? "Hide password" : "Show password"} className='icon-pass cursor-pointer' size="1.3em" onClick={() => setShowPassword(prev => !prev)}/>
                 </label>
                 <label htmlFor="re-password" className="form-label">
                     <span className="form-label-span">Confirm Pasword</span>
-                    <input required value={rePassword} type="password" className="form-input" id="re-password" onChange={(e) => setRePassword(e.target.value)} />
+                    <input required value={rePassword} autoComplete="on" type="password" className="form-input" id="re-password" onChange={(e) => setRePassword(e.target.value)} />
                 </label>
             </div>
             <input type="submit" className="form-submit" value='Sign In'/>

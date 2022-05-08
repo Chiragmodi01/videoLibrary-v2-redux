@@ -55,3 +55,9 @@
     background-color: var(--lightGrey);
     opacity: .7;
 }
+.icon-pass {
+    position: absolute;
+    right: 7px;
+    top: 25%;
+    color: var(--mild-grey);
+}

@@ -1,3 +1,19 @@
 .Playlist {
+    width: 100%;
     background-color: var(--primary);
+    height: calc(100vh - 59.17px);
+    grid-column: 2/-1;
+    grid-row: 3/-1;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.Playlist .videos-container {
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
 }

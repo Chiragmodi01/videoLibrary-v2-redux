@@ -6,7 +6,7 @@ import {thumbnail1, thumbnail2} from '../../assets/thumbnails/index'
 
 export const videos = [
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "ZYTAWkcaWi",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -17,7 +17,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "F_Riqjdh2oM",
+    _id: "J6zxocY6uc",
     thumbnail: thumbnail2,
     title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
     description:
@@ -28,7 +28,7 @@ export const videos = [
     views: "27k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "OKfvBJWFyo",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -39,7 +39,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "bWtVqFV8fm",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -50,7 +50,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "fELJgst2uO",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -61,7 +61,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "dg8c_MrqTP",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -72,7 +72,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "htmq6XiyKq",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -83,7 +83,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "4dC95Fbdoz",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -94,7 +94,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "8dVxbN30bz",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -105,7 +105,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "MzzduaQYwy",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -116,7 +116,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "4eWhv_Zfz_",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -127,7 +127,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "F_Riqjdh2oM",
+    _id: "J8noe2gNRP",
     thumbnail: thumbnail2,
     title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
     description:
@@ -138,7 +138,7 @@ export const videos = [
     views: "27k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "g99who0TwR",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -149,7 +149,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "0ffvO1jaGb",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -160,7 +160,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "wD_Vwz1rwZ",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -171,7 +171,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "Ly0jhPgknD",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -182,7 +182,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "bqDFp6Yrbq",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -193,7 +193,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "shtTO8yEQm",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -204,7 +204,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "OSwtaySJY3",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -215,7 +215,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "qKNDtSnge1",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -226,7 +226,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "tUsMCS0R44",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -237,7 +237,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "4yzfByc65a",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -248,7 +248,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "lDiIa2plUA",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -259,7 +259,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "v1n2u1JZAD",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -270,7 +270,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "BAcNgytRvX",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
@@ -281,7 +281,7 @@ export const videos = [
     views: "9.4k views"
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: "pweE06QMFj",
     thumbnail: thumbnail1,
     title: "Awesome Video about Coding",
     description:
