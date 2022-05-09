@@ -1,4 +1,4 @@
-.Liked {
+.SinglePagePlaylist {
     width: 100%;
     background-color: var(--primary);
     height: calc(100vh - 59.17px);
@@ -10,16 +10,10 @@
     justify-content: flex-start;
     flex-direction: column;
 }
-.Liked .videos-container {
+.SinglePagePlaylist .videos-container {
     padding: 1.5rem;
     width: 100%;
     box-sizing: border-box;
     position: relative;
     height: 100%;
-}
-.liked-title {
-    padding: 1.782rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--white);
 }

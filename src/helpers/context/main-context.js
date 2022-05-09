@@ -16,6 +16,7 @@ function MainProvider({ children }) {
     const [incognito, setIncognito] = useState(false);
     const [showPlaylistModal, setShowPlaylistModal] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const [addPlaylistInput, setAddPlaylistInput] = useState('');
 
     window.addEventListener('resize', MatchMedia);
 
@@ -60,11 +61,12 @@ function MainProvider({ children }) {
         filteredVideos: [],
         history: [],
         playlists: [],
-        watchlater: []
+        watchlater: [],
+        liked: []
     })    
 
     return (
-        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme, toastDelay, setToastDelay, userSignedIn, setUserSignedIn, userLoggedIn, setUserLoggedIn, incognito, setIncognito, showPlaylistModal, setShowPlaylistModal, showPassword, setShowPassword}}>
+        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme, toastDelay, setToastDelay, userSignedIn, setUserSignedIn, userLoggedIn, setUserLoggedIn, incognito, setIncognito, showPlaylistModal, setShowPlaylistModal, showPassword, setShowPassword, addPlaylistInput, setAddPlaylistInput}}>
             {children}
         </MainContext.Provider>
     )

@@ -27,7 +27,7 @@ function History() {
   return (
     <div className="History">
       <div className="history-header">
-        <h2 className='history-header-title'>Watch History</h2>
+        <h2 className='history-header-title'>Watch History ({state.history.length})</h2>
         <div className='history-header-right flex-centered gap-3 cursor-pointer' onClick={clearHistory}>
           <FaRegTrashAlt size="1.5em" />
           <h2 className="history-clear-text">Clear All Watch History</h2>

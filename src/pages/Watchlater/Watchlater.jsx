@@ -25,7 +25,7 @@ function Watchlater() {
   return (
     <div className="Watchlater">
       <div className="history-header">
-        <h2 className='history-header-title'>Watch Later</h2>
+        <h2 className='history-header-title'>Watch Later ({state.watchlater.length})</h2>
         <div className='history-header-right flex-centered gap-3 cursor-pointer' onClick={clearWatchlater}>
           <FaRegTrashAlt size="1.5em" />
           <h2 className="history-clear-text">Clear All Watch Later</h2>

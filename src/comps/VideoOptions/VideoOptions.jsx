@@ -32,6 +32,10 @@ function VideoOptions({video}) {
         deleteFromHistoryService(dispatch, video)
     }
 
+    const playlistOptionHandler = () => {
+        userLoggedIn ? setShowPlaylistModal(prev => !prev) : navigate("/signup")
+    }
+
     
 
   return (
@@ -44,7 +48,7 @@ function VideoOptions({video}) {
             <AiOutlineClockCircle size="1.5em" />
             <li className="videoOptions-menu-item">{isVideoInWatchlater ? 'Remove from Watch later' : 'Save to Watch later'}</li>
         </ul>
-        <ul className="videoOptions-menu cursor-pointer" onClick={() => setShowPlaylistModal(prev => !prev)}>
+        <ul className="videoOptions-menu cursor-pointer" onClick={() => playlistOptionHandler()}>
             <CgPlayListAdd size="1.5em" />
             <li className="videoOptions-menu-item">Save to playlist</li>
         </ul>
@@ -52,10 +56,7 @@ function VideoOptions({video}) {
             <BiShare className='icon-share-flip' size="1.5em" />
             <li className="videoOptions-menu-item">Share</li>
         </ul>
-        {userLoggedIn ?
-        showPlaylistModal && <PlaylistsModal /> : 
-        navigate("/signup")
-        }
+        { showPlaylistModal && <PlaylistsModal video={video} /> }
     </div>
   )
 }

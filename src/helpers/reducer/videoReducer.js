@@ -7,6 +7,15 @@ const videoReducer = (state, action) => {
             return { ...state, history: action.payload }
         case 'SET_WATCHLATER_ARRAY':
             return { ...state, watchlater: action.payload }
+        case 'SET_PLAYLISTS_ARRAY':
+            return { ...state, playlists: action.payload }
+        case 'SET_VIDEOS_IN_PLAYLISTS_ARRAY':
+            return {
+                ...state, 
+                playlists: state.playlists.map((playlist) => {
+                    return playlist._id === action.payload._id ? { ...playlist, videos: [...action.payload.videos]} : playlist
+                })
+            }
     }
 }
 

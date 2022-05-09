@@ -41,3 +41,6 @@
 .icon-add, .icon-close {
     color: var(--white);
 }
+.playlist-item {
+    margin: 5px 0;
+}
