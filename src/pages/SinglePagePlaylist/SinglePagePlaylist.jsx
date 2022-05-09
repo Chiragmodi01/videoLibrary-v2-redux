@@ -25,7 +25,7 @@ function SinglePagePlaylist( ) {
   return (
     <div className='SinglePagePlaylist'>
       <div className="history-header">
-        <h2 className='history-header-title'>{videoInPlaylist.title}</h2>
+        <h2 className='history-header-title'>{videoInPlaylist.title} ({videoInPlaylist.videos.length})</h2>
         <div className='history-header-right flex-centered gap-3 cursor-pointer' onClick={deleteCurrentPlaylist}>
           <FaRegTrashAlt size="1.5em" />
           <h2 className="history-clear-text">Delete Playlist</h2>
