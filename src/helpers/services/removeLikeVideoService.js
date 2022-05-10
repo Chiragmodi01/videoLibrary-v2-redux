@@ -7,7 +7,7 @@ const removeLikeVideoService = async(dispatch, video) => {
 
     try {
         const res = await axios.delete(`/api/user/likes/${video._id}`, {headers: Headers});
-        dispatch({ type: "SET_LIKED_ARRAY", payload: res.data.watchllikedater})
+        dispatch({ type: "SET_LIKED_ARRAY", payload: res.data.likes})
     } catch(e) {
         console.log(e.message)
     }
