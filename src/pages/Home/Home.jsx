@@ -18,7 +18,7 @@ function Home() {
       }
       {!loading && state.videos.map((video) => {
         return (
-          <Video video={video} key={video._id} views={video.views} thumbnail={video.thumbnail} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
+          <Video video={video} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
         )
       })}
       </div>

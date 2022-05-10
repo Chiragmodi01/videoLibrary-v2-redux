@@ -4,10 +4,11 @@ import {RiPlayList2Fill, FaRegTrashAlt} from '../../utils/getIcons'
 import { useMain } from '../../helpers/context/main-context';
 import { deletePlaylistService } from '../../helpers/services/deletePlaylistService';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function PlaylistCard({playlistId, playlistTitle, videosInPlaylist}) {
 
-  const{dispatch} = useMain();
+  const {dispatch} = useMain();
   let navigate = useNavigate()
 
   const deletePlaylistHandler = () => {
@@ -15,7 +16,9 @@ function PlaylistCard({playlistId, playlistTitle, videosInPlaylist}) {
   }
 
   const playlistCardClickHandler = () => {
-    navigate(`/playlist/${playlistId}`)
+    videosInPlaylist.length !== 0 ?
+    navigate(`/playlist/${playlistId}`) : 
+    toast.warning('Playlist is empty!');
   }
 
   return (

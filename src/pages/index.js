@@ -7,3 +7,4 @@ export {Signup} from './Signup/Signup';
 export {Login} from './Login/Login';
 export {PageNotFound} from './PageNotFound/PageNotFound';
 export {SinglePagePlaylist} from './SinglePagePlaylist/SinglePagePlaylist';
+export {SinglePageVideo} from './SinglePageVideo/SinglePageVideo';

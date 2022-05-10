@@ -45,7 +45,7 @@ function History() {
         <div className="history-current-day">{currentDate} {currentDay}</div>
         {!incognito && state.history.map((video) => {
           return (
-            <Video video={video} key={video._id} views={video.views} thumbnail={video.thumbnail} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
+            <Video video={video} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
           )
         })}
         </>
