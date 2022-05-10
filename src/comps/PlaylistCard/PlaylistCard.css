@@ -1,0 +1,50 @@
+.PlaylistCard {
+    background-color: var(--lightGrey);
+    width: 20rem;
+    height: 13rem;
+    position: relative;
+    color: var(--text-grey);
+}
+.playlist-right-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-light);
+    height: 9.5rem;
+    width: 4.5rem;
+    gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+.playlist-bottom-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--secondary-light);
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+.playlist-img-wrapper {
+    height: 100%;
+    width: 100%;
+}
+.playlist-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.playlist-right-wrapper {
+    font-weight: bold;
+}
+.PlaylistCard:hover .icon-delete-playlist{
+    display: inline-flex;
+}
+.icon-delete-playlist {
+    display: none;
+    padding-right: .5rem;
+}
+.icon-delete-playlist:hover {
+    color: red;
+}

@@ -1,7 +1,7 @@
 import React  from 'react'
 import './Navbar.css'
 import {useMain} from '../../helpers/context/main-context';
-import {IoIosMenu, IoSearchOutline, CgProfile, BiDotsVerticalRounded, BsMoon, BsSun, IoIosArrowForward, BiMask, AiOutlineLogout, MdFaceRetouchingOff, MdFace} from '../../utils/getIcons';
+import {IoIosMenu, IoSearchOutline, CgProfile, BiDotsVerticalRounded, BsMoon, BsSun, IoIosArrowForward, AiOutlineLogout, MdFaceRetouchingOff, MdFace} from '../../utils/getIcons';
 import {StyledButton, StyledDropdown} from '../../styledComps/index';
 import { Link } from "react-router-dom";
 import verifyForm from '../../utils/verifyForm';
@@ -9,12 +9,18 @@ import {toast} from 'react-toastify';
 import {incognitoFace} from '../../assets/svgs';
 
 function Navbar({toggleDropdownRef}) {
-  const { setHideMenu, onMobile, showDropdown, setShowDropdown, setLightTheme, lightTheme, userSignedIn, userLoggedIn, incognito, setIncognito } = useMain();
+  const { setHideMenu, onMobile, showDropdown, setShowDropdown, setLightTheme, lightTheme, userSignedIn, userLoggedIn, incognito, setIncognito, setToastDelay } = useMain();
   const {logoutSubmitHandler} = verifyForm();
 
   const setIncognitoMode = () => {
-    {incognito ? toast.info("Incognito mode turned off! Your history will be tracked!") : toast.info("You are browsing in Incognito mode now! Your history won't be tracked!") }
-    setIncognito(prev => !prev)
+    if(incognito) {
+      setToastDelay(2500);
+      toast.info("Incognito mode turned off! Your history will be tracked!");
+    } else {
+      setToastDelay(3700);
+      toast.info("You are browsing in Incognito mode now! Your history won't be tracked!");
+      setIncognito(prev => !prev)
+    }
   }
 
   const IconIncognito = incognito ? MdFace : MdFaceRetouchingOff
