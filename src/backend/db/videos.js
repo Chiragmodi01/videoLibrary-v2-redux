@@ -3,7 +3,7 @@
  * You can add videos of your wish with different attributes
  * */
 
-export const videos = [
+ export const videos = [
   {
     _id: "KRvv0QdruMQ",
     title: "Are There Lost Alien Civilizations in Our Past?",
