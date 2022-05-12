@@ -89,7 +89,7 @@ function SinglePageVideo() {
             <div className="videoPage-channel-wrapper">
                 <div className='videoPage-channel-info-wrapper flex-centered flex-row'>
                     <div className="videoPage-channel-img-container">
-                        <img src="https://i.pravatar.cc/44?img=3" alt="channel-image" className="videoPage-channel-image" />
+                        <img src={`https://yt3.ggpht.com/ytc/${findCurrentVideo.channelImg}=s48-c-k-c0x00ffffff-no-rj`} alt="channel-image" className="videoPage-channel-image" />
                     </div>
                     <div className="videoPage-channel-info-container">
                         <h3 className="videoPage-channel-name">{findCurrentVideo.channel}</h3>
