@@ -1,294 +1,319 @@
-import {thumbnail1, thumbnail2} from '../../assets/thumbnails/index'
 /**
  * Videos Database can be added here.
  * You can add videos of your wish with different attributes
  * */
 
-export const videos = [
+ export const videos = [
   {
-    _id: "ZYTAWkcaWi",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "KRvv0QdruMQ",
+    title: "Are There Lost Alien Civilizations in Our Past?",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLR8gqN3fHHNYbehMcsJ49rapBPhJMGPYSrl6YQyNg"
   },
   {
-    _id: "J6zxocY6uc",
-    thumbnail: thumbnail2,
-    title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
+    _id: "Xs6_vecSv2Y",
+    title: "Breaking Bad Greatest Moments - P.1 Intro and Neuron Code",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "Cucumber",
     timesAgo: "19 days ago",
     timeLength: "19.26",
-    views: "27k views"
+    views: "27k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "OKfvBJWFyo",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "EIm4HvDgQCM",
+    title: "Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "bWtVqFV8fm",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "USs37vVVOKs",
+    title: "Introducing AVINYA concept EV I A New Paradigm of Innovation",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "fELJgst2uO",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "ODkjqwIxgA4",
+    title: "Best of Stewie kills Lois | Family Guy (Part 2)",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "dg8c_MrqTP",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "Xs6_vecSv2Y",
+    title: "Breaking Bad Greatest Moments",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "htmq6XiyKq",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "USs37vVVOKs",
+    title: "Introducing AVINYA concept EV I A New Paradigm of Innovation",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "4dC95Fbdoz",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "EIm4HvDgQCM",
+    title: "Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "8dVxbN30bz",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "Xs6_vecSv2Y",
+    title: "Breaking Bad Greatest Moments",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "MzzduaQYwy",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "EIm4HvDgQCM",
+    title: "Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "4eWhv_Zfz_",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "USs37vVVOKs",
+    title: "Introducing AVINYA concept EV I A New Paradigm of Innovation",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "J8noe2gNRP",
-    thumbnail: thumbnail2,
-    title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
+    _id: "ODkjqwIxgA4",
+    title: "Best of Stewie kills Lois | Family Guy (Part 2) - P.1 Intro and Neuron Code",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "Cucumber",
     timesAgo: "19 days ago",
     timeLength: "19.26",
-    views: "27k views"
+    views: "27k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "g99who0TwR",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "EIm4HvDgQCM",
+    title: "Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "0ffvO1jaGb",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "KRvv0QdruMQ",
+    title: "Are There Lost Alien Civilizations in Our Past?",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "wD_Vwz1rwZ",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "ODkjqwIxgA4",
+    title: "Best of Stewie kills Lois | Family Guy (Part 2)",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "Ly0jhPgknD",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "KRvv0QdruMQ",
+    title: "Are There Lost Alien Civilizations in Our Past?",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "bqDFp6Yrbq",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "USs37vVVOKs",
+    title: "Introducing AVINYA concept EV I A New Paradigm of Innovation",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "shtTO8yEQm",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "EIm4HvDgQCM",
+    title: "Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "OSwtaySJY3",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "EIm4HvDgQCM",
+    title: "Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "qKNDtSnge1",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "Xs6_vecSv2Y",
+    title: "Breaking Bad Greatest Moments",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "tUsMCS0R44",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "USs37vVVOKs",
+    title: "Introducing AVINYA concept EV I A New Paradigm of Innovation",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "4yzfByc65a",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "ODkjqwIxgA4",
+    title: "Best of Stewie kills Lois | Family Guy (Part 2)",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "lDiIa2plUA",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "USs37vVVOKs",
+    title: "Introducing AVINYA concept EV I A New Paradigm of Innovation",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "v1n2u1JZAD",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "Xs6_vecSv2Y",
+    title: "Breaking Bad Greatest Moments",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "BAcNgytRvX",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "EIm4HvDgQCM",
+    title: "Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Music",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
   {
-    _id: "pweE06QMFj",
-    thumbnail: thumbnail1,
-    title: "Awesome Video about Coding",
+    _id: "USs37vVVOKs",
+    title: "Introducing AVINYA concept EV I A New Paradigm of Innovation",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     channel: "John Doe",
     timesAgo: "5 hours ago",
     timeLength: "0.16",
-    views: "9.4k views"
+    views: "9.4k views",
+    subscribers: "597K",
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
   },
 ];

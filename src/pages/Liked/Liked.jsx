@@ -2,7 +2,7 @@ import React from 'react'
 import './Liked.css'
 import {RiThumbUpLine} from '../../utils/getIcons';
 import { useMain } from '../../helpers/context/main-context';
-import {PlaylistsModal, PlaylistCard} from '../../comps';
+import {PlaylistsModal, Video} from '../../comps';
 
 function Liked() {
   const {state, showPlaylistModal} = useMain();
@@ -29,9 +29,9 @@ function Liked() {
         :
         <>
         <div className="history-current-day">{currentDate} {currentDay}</div>
-        {state.liked.map((playlist) => {
+        {state.liked.map((video) => {
           return (
-            <PlaylistCard playlistTitle={playlist.title} key={playlist._id} playlistId={playlist._id} videosInPlaylist={playlist.videos}/>
+            <Video video={video} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
           )
         })}
         </>

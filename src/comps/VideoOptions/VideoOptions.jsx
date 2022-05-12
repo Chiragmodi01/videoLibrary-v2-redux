@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './VideoOptions.css';
-import {AiOutlineClockCircle, CgPlayListAdd, BiShare, AiOutlineHistory} from '../../utils/getIcons';
+import {AiOutlineClockCircle, CgPlayListAdd, BiShare, AiOutlineHistory, RiThumbUpLine} from '../../utils/getIcons';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { watchLaterService } from '../../helpers/services/watchLaterService';
 import { deleteWatchlaterVideo } from '../../helpers/services/deleteWatchlaterVideo';
@@ -8,6 +8,8 @@ import { deleteFromHistoryService } from '../../helpers/services/deleteFromHisto
 import { useMain } from '../../helpers/context/main-context';
 import { findVideo } from '../../utils/findVideo';
 import {PlaylistsModal} from '../../comps';
+import { removeLikeVideoService } from '../../helpers/services/removeLikeVideoService';
+import { toast } from 'react-toastify';
 
 function VideoOptions({video}) {
     const {state, dispatch, userLoggedIn, showPlaylistModal, setShowPlaylistModal} = useMain();
@@ -32,6 +34,11 @@ function VideoOptions({video}) {
         deleteFromHistoryService(dispatch, video)
     }
 
+    const deleteFromLiked = () => {
+        removeLikeVideoService(dispatch, video);
+        toast.success('Video remove from liked');
+    }
+
     const playlistOptionHandler = () => {
         userLoggedIn ? setShowPlaylistModal(prev => !prev) : navigate("/signup")
     }
@@ -44,9 +51,13 @@ function VideoOptions({video}) {
             <AiOutlineHistory className='icon-share-flip' size="1.5em" />
             <li className="videoOptions-menu-item">Remove from history</li>
         </ul>}
+        { pathname === "/liked" && <ul className="videoOptions-menu cursor-pointer" onClick={deleteFromLiked}>
+            <RiThumbUpLine className='icon-like' size="1.5em" />
+            <li className="videoOptions-menu-item">Remove from liked</li>
+        </ul>}
         <ul className="videoOptions-menu cursor-pointer" onClick={isVideoInWatchlater ? deleteFromWatchlater : saveToWatchlater}>
             <AiOutlineClockCircle size="1.5em" />
-            <li className="videoOptions-menu-item">{isVideoInWatchlater ? 'Remove from Watch later' : 'Save to Watch later'}</li>
+            <li className="videoOptions-menu-item">{isVideoInWatchlater ? 'Remove from Watch later' : 'Add to Watch later'}</li>
         </ul>
         <ul className="videoOptions-menu cursor-pointer" onClick={() => playlistOptionHandler()}>
             <CgPlayListAdd size="1.5em" />

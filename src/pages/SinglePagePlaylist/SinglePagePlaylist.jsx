@@ -36,7 +36,7 @@ function SinglePagePlaylist( ) {
           videoInPlaylist.length === 0 ? 
           <h1>No Video In this Playlist</h1> :
           videoInPlaylist.videos.map((video) => {
-            return <Video video={video} key={video._id} views={video.views} thumbnail={video.thumbnail} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
+            return <Video video={video} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
           })
         }
       </div>
