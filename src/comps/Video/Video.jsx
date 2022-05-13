@@ -5,11 +5,14 @@ import {BiDotsVerticalRounded} from '../../utils/getIcons';
 import {VideoOptions} from '../../comps/index';
 import { historyVideoService } from '../../helpers/services/historyVideoService';
 import { useLocation, useNavigate } from 'react-router-dom';
+import {useOnClickOutside} from '../../utils/onClickOutside';
 
                
 function Video({channelImg, video, title, channel, timesAgo, timeLength, views}) {
     const {hideMenu, dispatch, userLoggedIn, incognito, setHideMenu} = useMain();
     const [showOptions, setShowOptions] = useState(false);
+
+    const videoOptionsRef = useOnClickOutside(() => setShowOptions(prev => !prev), showOptions)
 
     let {pathname} = useLocation();
     let navigate = useNavigate();
@@ -25,7 +28,7 @@ function Video({channelImg, video, title, channel, timesAgo, timeLength, views})
     }
 
   return (
-    <div className={hideMenu ? 'video-container big flex-centered' : 'video-container flex-centered'}>
+    <div className={hideMenu ? 'video-container big flex-centered' : 'video-container flex-centered'} ref={videoOptionsRef}>
         <div className="video-header cursor-pointer" onClick={videoHandler}>
             <img src={`https://i.ytimg.com/vi/${video._id}/mqdefault.jpg`} className="video-thumbnail" alt="video-thumbnail" />
             <span className="time-length">{timeLength}</span>
@@ -33,7 +36,7 @@ function Video({channelImg, video, title, channel, timesAgo, timeLength, views})
         <div className="video-footer">
             <div className="video-footer-top flex-centered">
                 <img src={`https://yt3.ggpht.com/ytc/${channelImg}=s48-c-k-c0x00ffffff-no-rj`} className="channel-image" alt="creator-image" />
-                <h4 className="video-title flex-centered">{title}</h4>
+                <h4 className="video-title flex-centered cursor-pointer" onClick={videoHandler}>{title}</h4>
                 <BiDotsVerticalRounded className='video-icon-dots cursor-pointer' size="1.5em"onClick={() => setShowOptions(prev => !prev)}/>
             </div>
             <div className="video-footer-bottom flex-centered">

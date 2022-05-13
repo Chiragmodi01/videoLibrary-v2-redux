@@ -14,7 +14,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLR8gqN3fHHNYbehMcsJ49rapBPhJMGPYSrl6YQyNg"
+    channelImg: "AKedOLR8gqN3fHHNYbehMcsJ49rapBPhJMGPYSrl6YQyNg",
+    category: 'Elon 1'
   },
   {
     _id: "Xs6_vecSv2Y",
@@ -26,7 +27,8 @@
     timeLength: "19.26",
     views: "27k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "EIm4HvDgQCM",
@@ -38,7 +40,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "USs37vVVOKs",
@@ -50,7 +53,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 2'
   },
   {
     _id: "ODkjqwIxgA4",
@@ -62,7 +66,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 2'
   },
   {
     _id: "Xs6_vecSv2Y",
@@ -74,7 +79,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 2'
   },
   {
     _id: "USs37vVVOKs",
@@ -86,7 +92,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 3'
   },
   {
     _id: "EIm4HvDgQCM",
@@ -98,7 +105,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 3'
   },
   {
     _id: "Xs6_vecSv2Y",
@@ -110,7 +118,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 3'
   },
   {
     _id: "EIm4HvDgQCM",
@@ -122,7 +131,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 4'
   },
   {
     _id: "USs37vVVOKs",
@@ -134,7 +144,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 4'
   },
   {
     _id: "ODkjqwIxgA4",
@@ -146,7 +157,8 @@
     timeLength: "19.26",
     views: "27k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 4'
   },
   {
     _id: "EIm4HvDgQCM",
@@ -158,7 +170,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "KRvv0QdruMQ",
@@ -170,7 +183,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "ODkjqwIxgA4",
@@ -182,7 +196,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "KRvv0QdruMQ",
@@ -194,7 +209,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "USs37vVVOKs",
@@ -206,7 +222,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 5'
   },
   {
     _id: "EIm4HvDgQCM",
@@ -218,7 +235,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 5'
   },
   {
     _id: "EIm4HvDgQCM",
@@ -230,7 +248,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "Xs6_vecSv2Y",
@@ -242,7 +261,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 7'
   },
   {
     _id: "USs37vVVOKs",
@@ -254,7 +274,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 8'
   },
   {
     _id: "ODkjqwIxgA4",
@@ -266,7 +287,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "USs37vVVOKs",
@@ -278,7 +300,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "Xs6_vecSv2Y",
@@ -290,7 +313,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "EIm4HvDgQCM",
@@ -302,7 +326,8 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
   {
     _id: "USs37vVVOKs",
@@ -314,6 +339,7 @@
     timeLength: "0.16",
     views: "9.4k views",
     subscribers: "597K",
-    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw"
+    channelImg: "AKedOLRVT94BfVl1Xw1UCqakso5v7sSWB0QQvLd3fAAKTw",
+    category: 'Elon 1'
   },
 ];

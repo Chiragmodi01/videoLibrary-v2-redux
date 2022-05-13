@@ -6,10 +6,16 @@ const StyledChip = styled.div`
     background-color: var(--lightGrey);
     color: var(--white);
     font-size: 1rem;
+    cursor: pointer;
     min-width: fit-content;
-    ${props => props.active === 'true' && css`
+    ${props => props.active === true && css`
     background-color: var(--white);
     color: var(--lightGrey);
+    `}
+    ${props => props.active === false && css`
+    &:hover {
+        background-color: var(--mild-grey);
+    }
     `}
 `
 

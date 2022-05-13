@@ -50,9 +50,24 @@ function MainProvider({ children }) {
             }, 1500)
         }
     }
+
+    const fetchCategories = async ()=> {
+        try {
+            setLoading(true);
+            const res = await axios.get('/api/categories')
+            dispatch({ type: 'FETCH_CATEGORIES', payload: res.data.categories})
+        } catch (e) {
+            console.error(e);
+        } finally {
+            setTimeout(() => {
+                setLoading(false);
+            }, 1500)
+        }
+    }
     
     useEffect(() => {
         fetchData();
+        fetchCategories();
     }, []);
 
     
@@ -62,7 +77,8 @@ function MainProvider({ children }) {
         history: [],
         playlists: [],
         watchlater: [],
-        liked: []
+        liked: [],
+        categories: []
     })    
 
     return (
