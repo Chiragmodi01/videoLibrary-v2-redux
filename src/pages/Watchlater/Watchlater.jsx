@@ -42,7 +42,7 @@ function Watchlater() {
         <div className="history-current-day">{currentDate} {currentDay}</div>
         {state.watchlater.map((video) => {
           return (
-            <Video video={video} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
+            <Video video={video} channelImg={video.channelImg} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
           )
         })}
         </>
