@@ -8,20 +8,86 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Computer Programming",
-    description:
-      "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
+    categoryName: "All"
   },
   {
     _id: uuid(),
-    categoryName: "Frontend Development",
-    description:
-      "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
+    categoryName: "Elon 1"
   },
   {
     _id: uuid(),
-    categoryName: "Backend Development",
-    description:
-      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+    categoryName: "Elon 2"
   },
+  {
+    _id: uuid(),
+    categoryName: "Elon 3"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 4"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 5"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 6"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 7"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 8"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 9"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 10"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 11"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 12"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 13"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 14"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 15"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 16"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 17"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 18"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 19"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Elon 20"
+  }
 ];
