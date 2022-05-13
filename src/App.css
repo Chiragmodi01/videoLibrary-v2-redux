@@ -20,12 +20,8 @@
     --black: #aaaaaa7d;
     --text-grey: #0f0f0f;
     --mild-grey: #aaaaaa7d;
-    /* --light-grey-scrollbar: #aaaaaa;
-    --dark-grey-scrollbar: #767676;
-    --mild-grey: #4d4d4d;
-    --black: #121212;
-    --blue: #065fd4;
-    --light-blue: #3ea6ff; */
+    --secondary-light: #1212129c;
+    --text-grey-bg-black: #aaaaaa; 
 }
 .App.light .time-length {
     color: white;

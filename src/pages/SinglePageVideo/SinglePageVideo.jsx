@@ -85,18 +85,28 @@ function SinglePageVideo() {
                         </span>
                     </div>
                 </div>
-            </div>
-            <div className="videoPage-channel-wrapper">
-                <div className='videoPage-channel-info-wrapper flex-centered flex-row'>
-                    <div className="videoPage-channel-img-container">
-                        <img src={`https://yt3.ggpht.com/ytc/${findCurrentVideo.channelImg}=s48-c-k-c0x00ffffff-no-rj`} alt="channel-image" className="videoPage-channel-image" />
-                    </div>
-                    <div className="videoPage-channel-info-container">
-                        <h3 className="videoPage-channel-name">{findCurrentVideo.channel}</h3>
-                        <h3 className="videoPage-channel-subs">{findCurrentVideo.subscribers} subscribers</h3>
-                    </div>
+                <div className="videoPage-info-desc">
+                    <h2 className="videoPage-video-desc">{findCurrentVideo.description}</h2>
                 </div>
-                <div className="videoPage-channel-btn-sub">Subscribe</div>
+            </div>
+            <div className="videoPage-left-main">
+                <div className="videoPage-channel-wrapper">
+                    <div className='videoPage-channel-info-wrapper flex-centered flex-row'>
+                        <div className="videoPage-channel-img-container">
+                            <img src={`https://yt3.ggpht.com/ytc/${findCurrentVideo.channelImg}=s48-c-k-c0x00ffffff-no-rj`} alt="channel-image" className="videoPage-channel-image" />
+                        </div>
+                        <div className="videoPage-channel-info-container">
+                            <h3 className="videoPage-channel-name">{findCurrentVideo.channel}</h3>
+                            <h3 className="videoPage-channel-subs">{findCurrentVideo.subscribers} subscribers</h3>
+                        </div>
+                    </div>
+                    <div className="videoPage-channel-btn-sub">Subscribe</div>
+                </div>
+            
+                <div className="videoPage-channel-desc-wrapper flex-centered flex-col">
+                    <h2 className="videoPage-channel-desc-item">Joined {findCurrentVideo.channelJoined}</h2>
+                    <h2 className="videoPage-channel-desc-item">{findCurrentVideo.channelViews} views</h2>
+                </div>
             </div>
         </div>
         { showPlaylistModal && <PlaylistsModal video={findCurrentVideo} /> }
