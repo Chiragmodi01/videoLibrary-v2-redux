@@ -1,34 +1,53 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Navpills.css'
 import {StyledChip} from '../../styledComps/index'
-
-import {IoIosArrowBack} from 'react-icons/io';
+import { useMain } from '../../helpers/context/main-context';
 
 function Navpills() {
+  const {state, loading, dispatch} = useMain();
+  const [isChipActive, setIsChipActive] = useState('')
+
+  const isCategoryMatches = (category) => {
+    return state.categories.find((x) => x.categoryName === category.categoryName)
+  };
+
+  useEffect(() => {
+      setTimeout(() => {
+        console.log(isChipActive, 'effect')
+        return setIsChipActive({categoryName: "All"})
+      }, 1800)
+  }, [])
+
+
+  const filterCategoryHandler = (category) => {
+    setIsChipActive(() => isCategoryMatches(category))
+
+    category.categoryName === 'ALL' ?
+    dispatch({type: "EMPTY_FILTERED_ARRAY"}) :
+    dispatch({type: "FILTER_CATEGORY", payload: category.categoryName})
+  }
+
 
   return (
     <div className='Navpills'>
-      <div className="navpills-before-curtain no-display">
-        <IoIosArrowBack className='icon-previous' size='1em' title="Previous"/>
-      </div>
-      <StyledChip active='true' className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
-      <StyledChip className='chip'>Elon musk</StyledChip>
+      { loading &&
+        [...Array(20)].map((x, idx) => {
+          return (
+            <StyledChip key={idx} className='chip'>loading..</StyledChip>
+          )
+        })
+      }
+      {!loading && state.categories.map((category) => {
+        return (
+          <StyledChip 
+            active={isChipActive.categoryName === category.categoryName} 
+            key={category._id}
+            className='chip'
+            onClick={() => filterCategoryHandler(category)}>
+            {category.categoryName}
+          </StyledChip>
+        )
+      })}
     </div>
   )
 }

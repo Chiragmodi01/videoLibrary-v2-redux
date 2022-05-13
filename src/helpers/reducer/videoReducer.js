@@ -3,6 +3,8 @@ const videoReducer = (state, action) => {
     switch (action.type) {
         case 'FETCH_DATA':
             return { ...state, videos: action.payload }
+        case 'FETCH_CATEGORIES':
+            return { ...state, categories: action.payload }
         case 'SET_HISTORY_ARRAY':
             return { ...state, history: action.payload }
         case 'SET_WATCHLATER_ARRAY':
@@ -18,6 +20,13 @@ const videoReducer = (state, action) => {
                     return playlist._id === action.payload._id ? { ...playlist, videos: [...action.payload.videos]} : playlist
                 })
             }
+        case 'FILTER_CATEGORY':
+            return {
+                ...state,
+                filteredVideos: state.videos.filter((video) => video.category === action.payload)
+            }
+        case 'EMPTY_FILTERED_ARRAY':
+            return { ...state, filteredVideos: []};
     }
 }
 
