@@ -2,11 +2,14 @@
     flex-direction: column;
     gap: .7rem;
     width: 15.85rem;
+    flex-grow: .5;
 }
 .tempCard-header {
-    height: 8.9rem;
-    width: 100%;
     background-color: #2c2c2c;
+    min-height: 8.9rem;
+    height: max-content;
+    width: 100%;
+    position: relative;
 }
 .tempCard-footer {
     display: grid;
@@ -46,4 +49,9 @@
     gap: .4rem;
     align-items: flex-start;
     border-radius: 2px;
+}
+@media screen and (max-width: 700px) {
+    .App .tempCard-container {
+        justify-content: center;
+    }
 }

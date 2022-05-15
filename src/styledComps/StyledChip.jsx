@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components'
 
 const StyledChip = styled.div`
     padding: .6rem 1rem;
+    margin: 0 0.5rem;
     border-radius: 10rem;
     background-color: var(--lightGrey);
     color: var(--white);

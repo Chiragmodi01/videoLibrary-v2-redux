@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
 .Navbar {
     background-color: var(--secondary);
     grid-column: 1/-1;
@@ -6,13 +7,17 @@
     align-items: center;
     justify-content: space-between;
     padding: .5rem 2rem .5rem 1rem;
+    flex-wrap: wrap;
+    height: max-content;
 }
 .nav-left {
     gap: 1rem;
+    height: 100%;
 }
 .nav-right {
     gap: 1rem;
     position: relative;
+    height: 100%;
 }
 .settings-dropdown {
     position: absolute;
@@ -21,8 +26,13 @@
     z-index: 2;
 }
 .brand {
-    font-size: 1.2rem;
     color: var(--white);
+    height: 100%;
+}
+.brand-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: 'Metrophobic', sans-serif;
 }
 .search-wrapper {
     height: 100%;
@@ -66,8 +76,8 @@
 .user-img {
     border-radius: 100%;
     background-color: var(--lightGrey);
-    height: 32px;
-    width: 32px;
+    height: 42px;
+    width: 42px;
 }
 
 .dropdown-menu {
@@ -85,8 +95,80 @@
     width: 100%;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1000px) {
     .search-input {
         width: auto;
     }
+}
+.searchbar {
+    position: relative;
+}
+.searchbar .search-suggestion-wrapper {
+    position: absolute;
+    width: calc(100% - 72px);
+    min-height: 5em;
+    max-height: 30rem;
+    height: max-content;
+    background-color: #ffffff;
+    padding: 1.5rem 0;
+    color: #121212;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+.searchbar .search-suggestion-wrapper ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: .95rem;
+    overflow-y: auto;
+}
+.searchbar .search-suggestion-wrapper ul li {
+    justify-content: flex-start;
+    padding: .5rem .5rem;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+}
+.searchbar .search-suggestion-wrapper ul li:hover {
+    background-color: var(--mild-grey-hover);
+}
+.searchbar .search-suggestion-wrapper ul p {
+    text-align: left;
+}
+.image-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-mid.onMobile {
+    margin: 1rem 0 5px 0;
+    width: 100%;
+}
+.nav-mid.onMobile form {
+    width: 100%;
+}
+.nav-mid.onMobile input {
+    width: 100%;
+}
+.image-circle-wrapper {
+    position: relative;
+}
+.image-circle-wrapper:hover img{
+    opacity: 50%;
+    filter: grayscale(1);
+}
+.image-circle-wrapper:hover .icon-switch-img{
+    visibility: visible;
+}
+.icon-switch-img {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    visibility: hidden;
+    cursor: pointer;
 }

@@ -55,6 +55,7 @@
 .page-placeholder.text {
     font-size: 1.3rem;
     color: var(--text-grey);
+    width: max-content;
 }
 .history-current-day {
     display: block;

@@ -11,7 +11,12 @@
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
-
+.App.onMobile {
+    grid-template-rows: auto auto 2fr auto;
+}
+.App.onMobile .Home {
+    grid-row: 3 / span 1;
+}
 .App.light {
     --primary: #ffffff;
     --secondary: #f9f9f9;
@@ -21,7 +26,7 @@
     --text-grey: #0f0f0f;
     --mild-grey: #aaaaaa7d;
     --secondary-light: #1212129c;
-    --text-grey-bg-black: #aaaaaa; 
+    --text-grey-bg-black: #aaaaaa;
 }
 .App.light .time-length {
     color: white;
@@ -38,6 +43,14 @@
     color: #121212;
     box-shadow: 0 0 15px 0 #595959 !important;
     line-height: 1.3rem;
+}
+
+@media screen and (max-width: 700px) {
+    .App .Playlist, .App .Signup, .App .Login, .App .Liked, .App .Watchlater, .App .History {
+        width: 100vw;
+        height: 100%;
+        grid-row: 2 / span 2;
+    }
 }
 
 a {

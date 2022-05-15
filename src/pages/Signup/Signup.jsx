@@ -6,9 +6,8 @@ import verifyForm from '../../utils/verifyForm';
 import { useMain } from '../../helpers/context/main-context';
 import {BsEyeFill, BsEyeSlashFill} from '../../utils/getIcons'
 
-
 function Signup() {
-    const { userData, setUserData, rePassword, setRePassword, submitUserData } = verifyForm();
+    const { userData, setUserData, rePassword, setRePassword, submitUserData, onMobile } = verifyForm();
 
     const {showPassword, setShowPassword} = useMain();
     const IconShowPass = showPassword ? BsEyeFill : BsEyeSlashFill;

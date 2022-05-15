@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './PlaylistsModal.css';
-import {GrClose, GrAdd} from '../../utils/getIcons'
+import {IoMdClose, IoMdAdd} from '../../utils/getIcons'
 import { useMain } from '../../helpers/context/main-context';
 import {createNewPlaylistService} from '../../helpers/services/createNewPlaylistService';
 import {addVideoToPlaylistService} from '../../helpers/services/addVideoToPlaylistService';
@@ -40,11 +40,11 @@ function PlaylistsModal({video, hideMenu}) {
         <div className="modal-wrapper flex-centered flex-col" ref={playlistModalRef}>
             <div className='modal-top flex-centered'>
                 <h2 className="modal-top-title">Add Playlist</h2>
-                <GrClose color="white" size="1em" className='icon-close cursor-pointer' onClick={() => setShowPlaylistModal(prev => !prev)}/>
+                <IoMdClose size="1em" className='icon-close cursor-pointer' onClick={() => setShowPlaylistModal(prev => !prev)}/>
             </div>
             <div className="modal-main flex-centered">
                 <input value={addPlaylistInput} type="text" className='modal-input' placeholder='Create New Playlist' onChange={(e) => createPlaylistHandler(e)} />
-                <GrAdd color="white" size="1.1em" className='icon-add cursor-pointer' onClick={addPlaylistHandler}/>
+                <IoMdAdd size="1.1em" className='icon-add cursor-pointer' onClick={addPlaylistHandler}/>
             </div>
             <div className='modal-bottom playlist-items'>
             {!hideMenu && state.playlists?.map((playlist) => {

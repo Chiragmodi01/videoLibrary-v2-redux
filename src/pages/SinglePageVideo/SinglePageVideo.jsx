@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useMain } from '../../helpers/context/main-context';
 import './SinglePageVideo.css';
@@ -10,11 +10,13 @@ import { deleteWatchlaterVideo } from '../../helpers/services/deleteWatchlaterVi
 import { findVideo, findVideoInLiked } from '../../utils/findVideo';
 import { PlaylistsModal } from '../../comps';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 function SinglePageVideo() {
     const {videoId} = useParams();  
-    const {state: {videos, watchlater, liked}, userLoggedIn, dispatch, showPlaylistModal, setShowPlaylistModal} = useMain();
+    const {state: {videos, watchlater, liked}, userLoggedIn, dispatch, showPlaylistModal, setShowPlaylistModal, setToastDelay} = useMain();
     let navigate = useNavigate();
+    const [singleVideoFetchRes, setSingleVideoFetchRes] = useState('');
 
     const findCurrentVideo = videos.find((video) => video._id === videoId);
     const isVideoInWatchlater = findVideo(videoId, watchlater) ? true : false;
@@ -52,6 +54,27 @@ function SinglePageVideo() {
         userLoggedIn ? setShowPlaylistModal(prev => !prev) : navigate("/signup")
     }
 
+    const copyCurrentHref = () => {
+        navigator.clipboard.writeText(window.location.href);
+        toast.success('Link copied to clipboard!');
+        setToastDelay(1500)
+    }
+
+    const fetchSingleVideo = async ()=> {
+        try {
+            const res = await axios.get(`/api/video/${videoId}`)
+            setSingleVideoFetchRes(res.data.video);
+        } catch (e) {
+            console.error(e);
+            navigate('404')
+        }
+    }
+
+    useEffect(() => {
+        fetchSingleVideo();
+    }, []);
+    console.log(singleVideoFetchRes)
+
   return (
     <div className='SinglePageVideo'>
         <div className="videoPage-iframe-wrapper">
@@ -60,18 +83,18 @@ function SinglePageVideo() {
         <div className='videoPage-info-main'>
             <div className="videoPage-info-wrapper">
                 <div className="videoPage-info-head">
-                    <h2 className="videoPage-video-title">{findCurrentVideo.title}</h2>
+                    <h2 className="videoPage-video-title">{singleVideoFetchRes.title}</h2>
                 </div>
                 <div className="videoPage-info-bottom flex align-center justify-start">
                     <div className='videoPage-info-bottom-first'>
-                        <p className="videoPage-video-views">{findCurrentVideo.views} • {findCurrentVideo.timesAgo}</p>
+                        <p className="videoPage-video-views">{singleVideoFetchRes.views} • {singleVideoFetchRes.timesAgo}</p>
                     </div>
                     <div className='videoPage-info-actions flex'>
                         <span title="I like this" onClick={isVideoInLiked ? removeLikeHandler : likeVideoHandler}>
                             <IconLike size="1.5em"/>
                             <p>{isVideoInLiked ? 'Liked' : 'Like'}</p>
                         </span>
-                        <span title="Share">
+                        <span title="Share" onClick={copyCurrentHref}>
                             <BiShare size="1.5em"/>
                             <p>Share</p>
                         </span>
@@ -86,30 +109,30 @@ function SinglePageVideo() {
                     </div>
                 </div>
                 <div className="videoPage-info-desc">
-                    <h2 className="videoPage-video-desc">{findCurrentVideo.description}</h2>
+                    <h2 className="videoPage-video-desc">{singleVideoFetchRes.description}</h2>
                 </div>
             </div>
             <div className="videoPage-left-main">
                 <div className="videoPage-channel-wrapper">
                     <div className='videoPage-channel-info-wrapper flex-centered flex-row'>
                         <div className="videoPage-channel-img-container">
-                            <img src={`https://yt3.ggpht.com/ytc/${findCurrentVideo.channelImg}=s48-c-k-c0x00ffffff-no-rj`} alt="channel-image" className="videoPage-channel-image" />
+                            <img src={`https://yt3.ggpht.com/ytc/${singleVideoFetchRes.channelImg}=s48-c-k-c0x00ffffff-no-rj`} alt="channel-image" className="videoPage-channel-image" />
                         </div>
                         <div className="videoPage-channel-info-container">
-                            <h3 className="videoPage-channel-name">{findCurrentVideo.channel}</h3>
-                            <h3 className="videoPage-channel-subs">{findCurrentVideo.subscribers} subscribers</h3>
+                            <h3 className="videoPage-channel-name">{singleVideoFetchRes.channel}</h3>
+                            <h3 className="videoPage-channel-subs">{singleVideoFetchRes.subscribers} subscribers</h3>
                         </div>
                     </div>
                     <div className="videoPage-channel-btn-sub">Subscribe</div>
                 </div>
             
                 <div className="videoPage-channel-desc-wrapper flex-centered flex-col">
-                    <h2 className="videoPage-channel-desc-item">Joined {findCurrentVideo.channelJoined}</h2>
-                    <h2 className="videoPage-channel-desc-item">{findCurrentVideo.channelViews} views</h2>
+                    <h2 className="videoPage-channel-desc-item">Joined {singleVideoFetchRes.channelJoined}</h2>
+                    <h2 className="videoPage-channel-desc-item">{singleVideoFetchRes.channelViews} views</h2>
                 </div>
             </div>
         </div>
-        { showPlaylistModal && <PlaylistsModal video={findCurrentVideo} /> }
+        { showPlaylistModal && <PlaylistsModal video={singleVideoFetchRes} /> }
     </div>
   )
 }

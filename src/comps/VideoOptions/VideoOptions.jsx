@@ -12,7 +12,7 @@ import { removeLikeVideoService } from '../../helpers/services/removeLikeVideoSe
 import { toast } from 'react-toastify';
 
 function VideoOptions({video}) {
-    const {state, dispatch, userLoggedIn, showPlaylistModal, setShowPlaylistModal} = useMain();
+    const {state, dispatch, userLoggedIn, showPlaylistModal, setShowPlaylistModal, setToastDelay} = useMain();
     let {pathname} = useLocation();
     let navigate = useNavigate();
 
@@ -44,6 +44,12 @@ function VideoOptions({video}) {
     }
 
     
+    const copyCurrentHref = () => {
+        navigator.clipboard.writeText(`${window.location.href}${video._id}`);
+        toast.success('Link copied to clipboard!');
+        setToastDelay(1500)
+    }
+    
 
   return (
     <div className='videoOptions'>
@@ -63,7 +69,7 @@ function VideoOptions({video}) {
             <CgPlayListAdd size="1.5em" />
             <li className="videoOptions-menu-item">Save to playlist</li>
         </ul>
-        <ul className="videoOptions-menu cursor-pointer">
+        <ul className="videoOptions-menu cursor-pointer" onClick={copyCurrentHref}>
             <BiShare className='icon-share-flip' size="1.5em" />
             <li className="videoOptions-menu-item">Share</li>
         </ul>

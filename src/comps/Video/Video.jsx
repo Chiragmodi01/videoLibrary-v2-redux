@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useMain } from '../../helpers/context/main-context';
 import './Video.css';
 import {BiDotsVerticalRounded} from '../../utils/getIcons';
@@ -11,8 +11,11 @@ import {useOnClickOutside} from '../../utils/onClickOutside';
 function Video({channelImg, video, title, channel, timesAgo, timeLength, views}) {
     const {hideMenu, dispatch, userLoggedIn, incognito, setHideMenu} = useMain();
     const [showOptions, setShowOptions] = useState(false);
+    const [isHoverVideoPlaying, setIsHoverVideoPlaying] = useState(false);
+    const [changeTextOnHover, setChangeTextOnHover] = useState(false);
 
     const videoOptionsRef = useOnClickOutside(() => setShowOptions(prev => !prev), showOptions)
+    const videoHoverRef = useRef(null);
 
     let {pathname} = useLocation();
     let navigate = useNavigate();
@@ -27,11 +30,38 @@ function Video({channelImg, video, title, channel, timesAgo, timeLength, views})
        }
     }
 
+    const playVideoOnHover = () => {
+        setChangeTextOnHover(true);
+        videoHoverRef.current = setTimeout(() => {
+            setIsHoverVideoPlaying(true)
+        }, 2000)
+    }
+    const stopHoverPlayingVideo = () => {
+        setChangeTextOnHover(false);
+        setIsHoverVideoPlaying(false);
+        clearTimeout(videoHoverRef.current)
+    }
+
+    const isAutoPlay = '?autoplay=1&mute=1';
+
   return (
     <div className={hideMenu ? 'video-container big flex-centered' : 'video-container flex-centered'} ref={videoOptionsRef}>
-        <div className="video-header cursor-pointer" onClick={videoHandler}>
-            <img src={`https://i.ytimg.com/vi/${video._id}/mqdefault.jpg`} className="video-thumbnail" alt="video-thumbnail" />
-            <span className="time-length">{timeLength}</span>
+        <div className="video-header cursor-pointer" onClick={videoHandler} onMouseOver={playVideoOnHover} onMouseOut={stopHoverPlayingVideo}>
+            {!isHoverVideoPlaying ? 
+            <div className='video-box'>
+                <img src={`https://i.ytimg.com/vi/${video._id}/mqdefault.jpg`} className="video-thumbnail" alt="video-thumbnail" />
+                <span className="video-box-border-top"></span>
+                <span className="video-box-border-right"></span>
+                <span className="video-box-border-bottom"></span>
+                <span className="video-box-border-left"></span>
+            {!changeTextOnHover ? <span className="time-length">{timeLength}</span> :
+                <span className="hover-text">Keep hovering to play</span> }
+            </div>:
+            <span className="iframe-wrapper flex-centered">
+                <span className="layer-iframe-short" onMouseOut={stopHoverPlayingVideo}></span>
+                <iframe className="video-iframe-short" src={`https://www.youtube.com/embed/${video._id}${isHoverVideoPlaying && isAutoPlay}&modestbranding=1&rel=0&amp;fs=0&amp;showinfo=0&`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </span>
+            }
         </div>
         <div className="video-footer">
             <div className="video-footer-top flex-centered">

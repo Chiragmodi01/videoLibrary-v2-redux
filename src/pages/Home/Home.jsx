@@ -7,8 +7,6 @@ function Home() {
   const {loading, state} = useMain();
 
   console.log(state.filteredVideos);
-  console.log(loading, 'loading');
-
 
   return (
     <div className='Home'>
