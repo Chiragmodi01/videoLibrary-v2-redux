@@ -42,11 +42,9 @@ function Video({channelImg, video, title, channel, timesAgo, timeLength, views})
         clearTimeout(videoHoverRef.current)
     }
 
-    const isAutoPlay = '?autoplay=1&mute=1';
-
   return (
     <div className={hideMenu ? 'video-container big flex-centered' : 'video-container flex-centered'} ref={videoOptionsRef}>
-        <div className="video-header cursor-pointer" onClick={videoHandler} onMouseOver={playVideoOnHover} onMouseOut={stopHoverPlayingVideo}>
+        <div className="video-header cursor-pointer" onClick={videoHandler} onMouseEnter={playVideoOnHover} onMouseLeave={stopHoverPlayingVideo}>
             {!isHoverVideoPlaying ? 
             <div className='video-box'>
                 <img src={`https://i.ytimg.com/vi/${video._id}/mqdefault.jpg`} className="video-thumbnail" alt="video-thumbnail" />
@@ -58,8 +56,9 @@ function Video({channelImg, video, title, channel, timesAgo, timeLength, views})
                 <span className="hover-text">Keep hovering to play</span> }
             </div>:
             <span className="iframe-wrapper flex-centered">
-                <span className="layer-iframe-short" onMouseOut={stopHoverPlayingVideo}></span>
-                <iframe className="video-iframe-short" src={`https://www.youtube.com/embed/${video._id}${isHoverVideoPlaying && isAutoPlay}&modestbranding=1&rel=0&amp;fs=0&amp;showinfo=0&`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                <span className="layer-iframe-short" onMouseLeave={stopHoverPlayingVideo}></span>
+                {/* <iframe className="video-iframe-short" src={`https://www.youtube-nocookie.com/embed/${video._id}?autoplay=1&mute=1&modestbranding=1&fs=0&showinfo=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
+                <iframe className="video-iframe-short" src="https://www.youtube-nocookie.com/embed/039nv45oth8?autoplay=1&mute=1&modestbranding=1&fs=0&showinfo=0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </span>
             }
         </div>
