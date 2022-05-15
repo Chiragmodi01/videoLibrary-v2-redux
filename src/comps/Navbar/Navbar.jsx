@@ -58,7 +58,6 @@ function Navbar({toggleDropdownRef}) {
   }
 
   const searchSuggestionClickHandler = (suggestion) => {
-    console.log(suggestion, 'suggestion');
     setSearchQuery(suggestion.title);
     setShowSuggestions(false);
     dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});

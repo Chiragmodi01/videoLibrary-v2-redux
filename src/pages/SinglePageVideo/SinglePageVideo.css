@@ -137,11 +137,7 @@
     width: 100%;
     text-align: left;
 }
-@media screen and (max-width: 700px) {
-    .SinglePageVideo {
-        text-align: left;
-        grid-row: 2 / span 1;
-    }
+@media screen and (max-width: 1350px) {
     .videoPage-info-main {
         flex-wrap: wrap;
     }
@@ -158,7 +154,24 @@
         gap: 0;
         margin: 0 0.8rem;
     }
+    .videoPage-info-actions svg{
+        margin-right: 0.5rem;
+    }
+    .videoPage-info-actions p {
+        display: flex;
+    }
+    
+}
+@media screen and (max-width: 1250px) {
+    .SinglePageVideo {
+        text-align: left;
+    }
     .videoPage-info-actions p {
         display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    .SinglePageVideo {
+        grid-row: 2 / span 1;
     }
 }

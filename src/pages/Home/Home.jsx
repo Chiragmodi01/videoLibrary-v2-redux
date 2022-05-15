@@ -6,8 +6,6 @@ import './Home.css'
 function Home() {
   const {loading, state} = useMain();
 
-  console.log(state.filteredVideos);
-
   return (
     <div className='Home'>
       <div className='videos-container'>
