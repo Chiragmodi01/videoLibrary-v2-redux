@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useMain } from '../../helpers/context/main-context'
 import {TempCard, Video} from '../../comps/index'
 import './Home.css'
