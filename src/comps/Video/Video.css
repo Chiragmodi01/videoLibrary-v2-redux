@@ -10,7 +10,7 @@
     opacity: 0.85;
 }
 .video-header {
-    min-height: 8.9rem;
+    min-height: 9.2rem;
     height: 100%;
     height: max-content;
     width: 100%;
@@ -113,7 +113,6 @@
     max-width: 13rem;
 }
 .iframe-wrapper {
-    /* position: relative; */
     height: 100%;
     width: 100%;
 }

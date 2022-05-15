@@ -57,8 +57,7 @@ function Video({channelImg, video, title, channel, timesAgo, timeLength, views})
             </div>:
             <span className="iframe-wrapper flex-centered">
                 <span className="layer-iframe-short" onMouseLeave={stopHoverPlayingVideo}></span>
-                {/* <iframe className="video-iframe-short" src={`https://www.youtube-nocookie.com/embed/${video._id}?autoplay=1&mute=1&modestbranding=1&fs=0&showinfo=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
-                <iframe className="video-iframe-short" src="https://www.youtube-nocookie.com/embed/039nv45oth8?autoplay=1&mute=1&modestbranding=1&fs=0&showinfo=0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                <iframe className="video-iframe-short" src={`https://www.youtube-nocookie.com/embed/${video._id}?autoplay=1&mute=1&modestbranding=1&fs=0&showinfo=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </span>
             }
         </div>
