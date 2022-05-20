@@ -10,7 +10,6 @@ const createNewPlaylistService = async(dispatch, addPlaylistInput) => {
     try {
         const res = await axios.post(`/api/user/playlists`, dataToSend, {headers: Headers});
         dispatch({ type: "SET_PLAYLISTS_ARRAY", payload: res.data.playlists})
-        console.log(res.data.playlists)
     } catch(e) {
         console.log(e.message)
     }

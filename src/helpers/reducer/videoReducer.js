@@ -27,7 +27,26 @@ const videoReducer = (state, action) => {
             }
         case 'EMPTY_FILTERED_ARRAY':
             return { ...state, filteredVideos: []};
-    }
+        case 'FILTER_BY_SEARCH': 
+            return {
+                ...state,
+                filteredVideos: state.videos.filter((video) => 
+                video.title.toLowerCase().includes(action.payload.toLowerCase()) ||
+                video.title.toLowerCase().includes(action.payload.toLowerCase())
+            )}
+        case 'SEARCH_SUGGESTIONS' : {
+            return { 
+                ...state,
+                searchSuggestions: state.videos.filter((video) => 
+                video.title.toLowerCase().includes(action.payload.toLowerCase()) ||
+                video.title.toLowerCase().includes(action.payload.toLowerCase())
+            )}
+        }
+        case 'EMPTY_SEARCH_SUGGESTIONS' : {
+            return { ...state, searchSuggestions: []}
+        }
+
+        }
 }
 
 export { videoReducer };

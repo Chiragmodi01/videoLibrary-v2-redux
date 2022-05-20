@@ -12,82 +12,50 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Elon 1"
+    categoryName: "Kurzgesagt"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 2"
+    categoryName: "Avicii"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 3"
+    categoryName: "Lex Fridman"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 4"
+    categoryName: "PowerfulJRE"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 5"
+    categoryName: "Varun Mayya"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 6"
+    categoryName: "Akshay Saini"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 7"
+    categoryName: "Tim Ferriss"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 8"
+    categoryName: "Andrew Huberman"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 9"
+    categoryName: "Music"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 10"
+    categoryName: "Lex Clips"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 11"
+    categoryName: "Fireship"
   },
   {
     _id: uuid(),
-    categoryName: "Elon 12"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 13"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 14"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 15"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 16"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 17"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 18"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 19"
-  },
-  {
-    _id: uuid(),
-    categoryName: "Elon 20"
+    categoryName: "Naval"
   }
 ];

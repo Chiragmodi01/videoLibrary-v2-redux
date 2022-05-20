@@ -12,10 +12,7 @@ function Navpills() {
   };
 
   useEffect(() => {
-      setTimeout(() => {
-        console.log(isChipActive, 'effect')
-        return setIsChipActive({categoryName: "All"})
-      }, 1800)
+      return setIsChipActive({categoryName: "All"})
   }, [])
 
 

@@ -2,6 +2,7 @@
     width: 100%;
     background-color: var(--primary);
     height: calc(100vh - 59.17px);
+    display: grid;
 }
 .form-title {
     font-size: 1.5rem;

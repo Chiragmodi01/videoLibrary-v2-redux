@@ -1,9 +1,10 @@
 .PlaylistCard {
-    background-color: var(--lightGrey);
+    background-color: var(--text-grey-bg-black);
     width: 20rem;
     height: 13rem;
     position: relative;
-    color: var(--text-grey);
+    color: var(--light-grey);
+    font-weight: bold;
 }
 .playlist-right-wrapper {
     position: absolute;

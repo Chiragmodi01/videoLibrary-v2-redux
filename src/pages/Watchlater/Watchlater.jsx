@@ -31,6 +31,7 @@ function Watchlater() {
           <h2 className="history-clear-text">Clear All Watch Later</h2>
         </div>
       </div>
+        <div className="history-current-day">{currentDate} {currentDay}</div>
       <div className="videos-container">
         {
         state.watchlater.length === 0 ? 
@@ -39,10 +40,9 @@ function Watchlater() {
           <h1 className='page-placeholder text'>Nothing in Watch later Yet</h1>
         </div> :
         <>
-        <div className="history-current-day">{currentDate} {currentDay}</div>
         {state.watchlater.map((video) => {
           return (
-            <Video video={video} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
+            <Video video={video} channelImg={video.channelImg} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
           )
         })}
         </>

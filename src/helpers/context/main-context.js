@@ -17,6 +17,7 @@ function MainProvider({ children }) {
     const [showPlaylistModal, setShowPlaylistModal] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [addPlaylistInput, setAddPlaylistInput] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
 
     window.addEventListener('resize', MatchMedia);
 
@@ -78,11 +79,12 @@ function MainProvider({ children }) {
         playlists: [],
         watchlater: [],
         liked: [],
-        categories: []
+        categories: [],
+        searchSuggestions: []
     })    
 
     return (
-        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme, toastDelay, setToastDelay, userSignedIn, setUserSignedIn, userLoggedIn, setUserLoggedIn, incognito, setIncognito, showPlaylistModal, setShowPlaylistModal, showPassword, setShowPassword, addPlaylistInput, setAddPlaylistInput}}>
+        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme, toastDelay, setToastDelay, userSignedIn, setUserSignedIn, userLoggedIn, setUserLoggedIn, incognito, setIncognito, showPlaylistModal, setShowPlaylistModal, showPassword, setShowPassword, addPlaylistInput, setAddPlaylistInput, searchQuery, setSearchQuery}}>
             {children}
         </MainContext.Provider>
     )

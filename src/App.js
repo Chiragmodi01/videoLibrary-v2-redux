@@ -10,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
 function App() {
-  const {lightTheme, showDropdown, setShowDropdown} = useMain();
+  const {lightTheme, showDropdown, setShowDropdown, onMobile} = useMain();
   const toggleDropdownRef = useRef(null);
   const {pathname} = useLocation();
 
@@ -27,12 +27,11 @@ function App() {
   return (
     <>
     <Toast />
-      <div className={lightTheme ? "App light" : "App"} onClick={closeDropdown}>
+      <div className={lightTheme ? `App light ${onMobile && 'onMobile'}` : `App ${onMobile && 'onMobile'}`} onClick={closeDropdown}>
         
         <Navbar toggleDropdownRef={toggleDropdownRef}/>
         <Sidebar />
         {pathname === '/' &&<Navpills />}
-        <FooterNav />
 
         <Routes>
           <Route path="/" element={<Home />}/>
@@ -47,6 +46,8 @@ function App() {
           <Route path="/mock" element={<Mockman />} />
           <Route path = '*' element={<PageNotFound />} />
         </Routes>
+        
+      <FooterNav />
       </div>
     </>
   );

@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useMain } from '../../helpers/context/main-context'
 import {TempCard, Video} from '../../comps/index'
 import './Home.css'
 
 function Home() {
   const {loading, state} = useMain();
-
-  console.log(state.filteredVideos);
-  console.log(loading, 'loading');
-
 
   return (
     <div className='Home'>

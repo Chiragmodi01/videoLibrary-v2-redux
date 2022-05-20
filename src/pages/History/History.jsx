@@ -33,6 +33,7 @@ function History() {
           <h2 className="history-clear-text">Clear All Watch History</h2>
         </div>
       </div>
+          <div className="history-current-day">{currentDate} {currentDay}</div>
       <div className="videos-container">
         {
         state.history.length === 0 || incognito? 
@@ -42,10 +43,9 @@ function History() {
         </div> 
         :
         <>
-        <div className="history-current-day">{currentDate} {currentDay}</div>
         {!incognito && state.history.map((video) => {
           return (
-            <Video video={video} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
+            <Video video={video} channelImg={video.channelImg} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>
           )
         })}
         </>

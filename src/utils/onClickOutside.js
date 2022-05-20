@@ -11,11 +11,11 @@ const useOnClickOutside = (handler, shouldAddListener = true) =>{
     };
     if (shouldAddListener){
       document.addEventListener("mousedown", listener);
-      document.addEventListener ("touchstart", listener);
+      document.addEventListener ("touchstart", listener, {passive: true});
     }
     return () =>{
       document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
+      document.removeEventListener("touchstart", listener, {passive: true});
     };
  }, [ref, handler, shouldAddListener]);
 

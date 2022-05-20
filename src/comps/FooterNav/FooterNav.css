@@ -2,11 +2,11 @@
     background-color: var(--secondary);
     height: 100%;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
     height: max-content;
     width: 100%;
     z-index: 1;
+    grid-column: 1/-1;
+    grid-row: 4/ -1;
 }
 .footerNav-container {
     display: flex;

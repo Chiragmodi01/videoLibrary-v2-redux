@@ -12,6 +12,8 @@
 }
 .History .videos-container {
     padding: 1.5rem;
+    align-content: flex-start;
+    padding-top: 0;
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -55,6 +57,7 @@
 .page-placeholder.text {
     font-size: 1.3rem;
     color: var(--text-grey);
+    width: max-content;
 }
 .history-current-day {
     display: block;
@@ -62,4 +65,6 @@
     text-align: left;
     font-weight: bold;
     color: var(--white);
+    padding: 2rem;
+    box-sizing: border-box;
 }
