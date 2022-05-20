@@ -19,6 +19,7 @@ function Liked() {
         <h2 className='liked-title'>Liked ({state.liked.length})</h2>
       </div>
 
+        <div className="history-current-day">{currentDate} {currentDay}</div>
       <div className="videos-container">
         {
         state.liked.length === 0 ?
@@ -28,7 +29,6 @@ function Liked() {
         </div>
         :
         <>
-        <div className="history-current-day">{currentDate} {currentDay}</div>
         {state.liked.map((video) => {
           return (
             <Video video={video} channelImg={video.channelImg} key={video._id} views={video.views} title={video.title} channel={video.channel} timesAgo={video.timesAgo} timeLength={video.timeLength}/>

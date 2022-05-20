@@ -25,6 +25,7 @@ function Playlist() {
           <h2 className="history-clear-text">Create Playlist</h2>
         </div>
       </div>
+        <div className="history-current-day">{currentDate} {currentDay}</div>
 
       <div className="videos-container">
         {
@@ -35,7 +36,6 @@ function Playlist() {
         </div>
         :
         <>
-        <div className="history-current-day">{currentDate} {currentDay}</div>
         {state.playlists.map((playlist) => {
           return (
             <PlaylistCard playlistTitle={playlist.title} key={playlist._id} playlistId={playlist._id} videosInPlaylist={playlist.videos}/>

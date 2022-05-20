@@ -16,6 +16,8 @@
     box-sizing: border-box;
     position: relative;
     height: 100%;
+    align-content: flex-start;
+    padding-top: 0;
 }
 .liked-title {
     padding: 1.782rem 1.5rem;
