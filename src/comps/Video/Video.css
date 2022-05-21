@@ -80,7 +80,6 @@
     overflow-y: hidden;
 }
 .video-title {
-    min-width: 70%;
     flex-wrap: wrap;
     line-height: 1.15rem;
     font-size: 1rem;
