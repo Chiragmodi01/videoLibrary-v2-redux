@@ -1,0 +1,14 @@
+.VoiceSearch {
+    width: 2.5rem;
+    background-color: var(--primary);
+    border-radius: 100%;
+    cursor: pointer;
+}
+.icon-mic {
+    color: var(--white);
+    padding: .5rem 0;
+}
+.loading-svg {
+    max-height: 39.1px;
+    width: 2.5rem;
+}

@@ -1,9 +1,10 @@
 import React, { useState }  from 'react'
 import './Navbar.css'
 import {useMain} from '../../helpers/context/main-context';
-import {MdOutlineFlipCameraIos, IoIosMenu, IoSearchOutline, CgProfile, BiDotsVerticalRounded, BsMoon, BsSun, IoIosArrowForward, AiOutlineLogout, MdFaceRetouchingOff, MdFace} from '../../utils/getIcons';
+import {MdOutlineFlipCameraIos, IoIosMenu, IoSearchOutline, CgProfile, BiDotsVerticalRounded, BsMoon, BsSun, IoIosArrowForward, AiOutlineLogout, MdFaceRetouchingOff, MdFace, IoMdClose} from '../../utils/getIcons';
 import {StyledButton, StyledDropdown} from '../../styledComps/index';
 import { Link } from "react-router-dom";
+import {VoiceSearch} from '../../comps'
 import verifyForm from '../../utils/verifyForm';
 import {toast} from 'react-toastify';
 import {incognitoFace} from '../../assets/svgs';
@@ -18,7 +19,6 @@ function Navbar({toggleDropdownRef}) {
   let {pathname} = useLocation();
   let navigate = useNavigate();
   const [changeAvatar, setChangeAvatar] = useState(false);
-
   const setIncognitoMode = () => {
     if(incognito) {
       setToastDelay(2500);
@@ -34,15 +34,12 @@ function Navbar({toggleDropdownRef}) {
   const IconIncognito = incognito ? MdFace : MdFaceRetouchingOff
 
   const searchHandler = (e) => {
-    setShowSuggestions(false);
     e.preventDefault();
+    setShowSuggestions(false);
     if(searchQuery === '' || searchQuery.length === 0) {
       dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});
       toast.warning('Searchbox is empty!');
       setToastDelay(1000);
-    } else if(state.searchSuggestions.length === state.filteredVideos.length){
-      toast.info('No matching videos found!');
-      setToastDelay(1200);
     } else {
       dispatch({type: 'FILTER_BY_SEARCH', payload: searchQuery});
       pathname !== "/" && navigate("/");
@@ -66,6 +63,11 @@ function Navbar({toggleDropdownRef}) {
     dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});
   }
 
+  const clearForm = () => {
+    setSearchQuery('');
+    dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});
+  }
+
   return (
     <div className='Navbar'>
       <div className="nav-left flex-centered">
@@ -82,7 +84,9 @@ function Navbar({toggleDropdownRef}) {
           <input type="text" placeholder='Search' className='search-input' value={searchQuery} onChange={(e) => searchOnChangeHandler(e)}/>
           <button type="submit" className="search-icon-wrapper flex-centered" title="Search">
             <IoSearchOutline className="icon-search" size='1.5em' title="Search"/>
+            {searchQuery && <IoMdClose type="reset" onClick={clearForm} className='icon-close-search' size="1em"/>}
           </button>
+          <VoiceSearch setSearchQuery={setSearchQuery} />
           {showSuggestions && <div className="search-suggestion-wrapper flex-centered flex-col">
             <ul>
               {

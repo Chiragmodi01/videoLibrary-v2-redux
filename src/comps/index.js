@@ -7,3 +7,4 @@ export {Video} from './Video/Video';
 export {VideoOptions} from './VideoOptions/VideoOptions';
 export {PlaylistsModal} from './PlaylistsModal/PlaylistsModal';
 export {PlaylistCard} from './PlaylistCard/PlaylistCard';
+export {VoiceSearch} from "./VoiceSearch/VoiceSearch";

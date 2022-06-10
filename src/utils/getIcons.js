@@ -1,5 +1,5 @@
-export {IoIosMenu, IoIosArrowForward,IoMdClose, IoMdAdd} from 'react-icons/io';
-export {IoSearchOutline} from 'react-icons/io5';
+export {IoIosMenu, IoIosArrowForward,IoMdClose, IoMdAdd, IoMdMic} from 'react-icons/io';
+export {IoSearchOutline,} from 'react-icons/io5';
 export {AiFillHome, AiOutlineHome, AiFillClockCircle, AiOutlineClockCircle, AiOutlineHistory, AiOutlineLogout} from 'react-icons/ai';
 export {RiThumbUpFill, RiThumbUpLine, RiFolderHistoryLine, RiPlayList2Fill} from 'react-icons/ri';
 export {MdVideoLibrary, MdOutlineVideoLibrary, MdFaceRetouchingOff, MdFace, MdOutlineFlipCameraIos} from 'react-icons/md';
