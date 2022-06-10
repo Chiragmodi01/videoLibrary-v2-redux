@@ -23,6 +23,7 @@ function Navbar({toggleDropdownRef}) {
     if(incognito) {
       setToastDelay(2500);
       toast.info("Incognito mode turned off! Your history will be tracked!");
+      setIncognito(prev => !prev)
     } else {
       setToastDelay(3700);
       toast.info("You are browsing in Incognito mode now! Your history won't be tracked!");
