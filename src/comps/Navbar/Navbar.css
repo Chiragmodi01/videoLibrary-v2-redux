@@ -41,6 +41,7 @@
     background-color: var(--lightGrey);
     padding: 0.7rem 0;
     width: 4.5rem;
+    position: relative;
 }
 .search-input {
     outline: none;
@@ -102,6 +103,7 @@
 }
 .searchbar {
     position: relative;
+    gap: .5rem;
 }
 .searchbar .search-suggestion-wrapper {
     position: absolute;
@@ -171,4 +173,14 @@
     left: 25%;
     visibility: hidden;
     cursor: pointer;
+}
+.icon-close-search {
+    position: absolute;
+    top: 25%;
+    left: -50%;
+    color: var(--light-grey);
+    font-size: 1rem;
+}
+.icon-close-search:hover {
+    color: tomato;
 }
