@@ -8,7 +8,7 @@ import verifyForm from '../../utils/verifyForm';
 import {toast} from 'react-toastify';
 import {incognitoFace} from '../../assets/svgs';
 import { useOnClickOutside } from '../../utils/onClickOutside';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Navbar({toggleDropdownRef}) {
   const { state, dispatch, searchQuery, setSearchQuery, setHideMenu, onMobile, showDropdown, setShowDropdown, setLightTheme, lightTheme, userSignedIn, userLoggedIn, incognito, setIncognito, setToastDelay } = useMain();
@@ -16,6 +16,7 @@ function Navbar({toggleDropdownRef}) {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchSuggestionsRef = useOnClickOutside(() => setShowSuggestions(false), showSuggestions)
   let {pathname} = useLocation();
+  let navigate = useNavigate();
   const [changeAvatar, setChangeAvatar] = useState(false);
 
   const setIncognitoMode = () => {
@@ -43,6 +44,7 @@ function Navbar({toggleDropdownRef}) {
       setToastDelay(1200);
     } else {
       dispatch({type: 'FILTER_BY_SEARCH', payload: searchQuery});
+      pathname !== "/" && navigate("/");
     }
   }
 
@@ -63,8 +65,6 @@ function Navbar({toggleDropdownRef}) {
     dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});
   }
 
-  const disableInput = pathname === "/" ?  false : true;
-
   return (
     <div className='Navbar'>
       <div className="nav-left flex-centered">
@@ -78,7 +78,7 @@ function Navbar({toggleDropdownRef}) {
       </div>
       {!onMobile && <div className="nav-mid flex-centered">
         <form className="searchbar flex-centered" onSubmit={(e) => searchHandler(e)} ref={searchSuggestionsRef}>
-          <input disabled={disableInput} type="text" placeholder='Search' className='search-input' value={searchQuery} onChange={(e) => searchOnChangeHandler(e)}/>
+          <input type="text" placeholder='Search' className='search-input' value={searchQuery} onChange={(e) => searchOnChangeHandler(e)}/>
           <button type="submit" className="search-icon-wrapper flex-centered" title="Search">
             <IoSearchOutline className="icon-search" size='1.5em' title="Search"/>
           </button>
@@ -145,7 +145,7 @@ function Navbar({toggleDropdownRef}) {
       {
         onMobile && <div className="nav-mid onMobile flex-centered">
         <form className="searchbar flex-centered" onSubmit={(e) => searchHandler(e)} ref={searchSuggestionsRef}>
-          <input disabled={disableInput} type="text" placeholder='Search' className='search-input onMobile' value={searchQuery} onChange={(e) => searchOnChangeHandler(e)}/>
+          <input type="text" placeholder='Search' className='search-input onMobile' value={searchQuery} onChange={(e) => searchOnChangeHandler(e)}/>
           <button type="submit" className="search-icon-wrapper flex-centered" title="Search">
             <IoSearchOutline className="icon-search" size='1.5em' title="Search"/>
           </button>
