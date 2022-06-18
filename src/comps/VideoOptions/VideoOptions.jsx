@@ -12,7 +12,7 @@ import { removeLikeVideoService } from '../../helpers/services/removeLikeVideoSe
 import { toast } from 'react-toastify';
 
 function VideoOptions({video}) {
-    const {state, dispatch, userLoggedIn, showPlaylistModal, setShowPlaylistModal, setToastDelay} = useMain();
+    const {state, dispatch, utilsState: {userLoggedIn, showPlaylistModal}, utilsDispatch} = useMain();
     let {pathname} = useLocation();
     let navigate = useNavigate();
 
@@ -40,14 +40,14 @@ function VideoOptions({video}) {
     }
 
     const playlistOptionHandler = () => {
-        userLoggedIn ? setShowPlaylistModal(prev => !prev) : navigate("/signup")
+        userLoggedIn ? utilsDispatch({type: "SHOW_PLAYLIST_MODAL", payload: !showPlaylistModal}) : navigate("/signup")
     }
 
     
     const copyCurrentHref = () => {
         navigator.clipboard.writeText(`${window.location.href}${video._id}`);
         toast.success('Link copied to clipboard!');
-        setToastDelay(1500)
+        utilsDispatch({type: "TOAST_DELAY", payload: 1500 });
     }
     
 

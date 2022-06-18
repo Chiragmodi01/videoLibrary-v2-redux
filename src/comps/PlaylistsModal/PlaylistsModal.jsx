@@ -9,12 +9,12 @@ import { toast } from 'react-toastify';
 import {findVideoInPlaylist} from '../../utils/findVideo';
 
 function PlaylistsModal({video, hideMenu}) {
-    const { state, dispatch, showPlaylistModal, setShowPlaylistModal, addPlaylistInput, setAddPlaylistInput} = useMain();
+    const { state, dispatch, utilsState:{showPlaylistModal, addPlaylistInput}, utilsDispatch} = useMain();
     const playlistModalRef = useRef(null)
 
     const closePlaylistModal = (e) => {
     if(showPlaylistModal && (!playlistModalRef.current.contains(e.target))) {
-        setShowPlaylistModal(false);
+        utilsDispatch({type: "SHOW_PLAYLIST_MODAL", payload: false});
         }
     }
 
@@ -22,11 +22,11 @@ function PlaylistsModal({video, hideMenu}) {
         addPlaylistInput.length === 0 ? 
         toast.warning('Playlist name cannot be empty') :
         createNewPlaylistService(dispatch, addPlaylistInput);
-        setAddPlaylistInput('');
+        utilsDispatch({type: "ADD_PLAYLIST_INPUT", payload: ''});
     }
 
     const createPlaylistHandler = (e) => {
-        setAddPlaylistInput(e.target.value);
+        utilsDispatch({type: "ADD_PLAYLIST_INPUT", payload: e.target.value});
     }
 
     const playlistCheckHandler = (e, playlist) => {
@@ -40,7 +40,7 @@ function PlaylistsModal({video, hideMenu}) {
         <div className="modal-wrapper flex-centered flex-col" ref={playlistModalRef}>
             <div className='modal-top flex-centered'>
                 <h2 className="modal-top-title">Add Playlist</h2>
-                <IoMdClose size="1em" className='icon-close cursor-pointer' onClick={() => setShowPlaylistModal(prev => !prev)}/>
+                <IoMdClose size="1em" className='icon-close cursor-pointer' onClick={() =>    utilsDispatch({type: "SHOW_PLAYLIST_MODAL", payload: !playlistModal})}/>
             </div>
             <div className="modal-main flex-centered">
                 <input value={addPlaylistInput} type="text" className='modal-input' placeholder='Create New Playlist' onChange={(e) => createPlaylistHandler(e)} />

@@ -45,6 +45,8 @@ const videoReducer = (state, action) => {
         case 'EMPTY_SEARCH_SUGGESTIONS' : {
             return { ...state, searchSuggestions: []}
         }
+        default:
+            return state;
 
         }
 }

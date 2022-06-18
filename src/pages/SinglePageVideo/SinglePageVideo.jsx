@@ -14,7 +14,8 @@ import axios from 'axios';
 
 function SinglePageVideo() {
     const {videoId} = useParams();  
-    const {state: {videos, watchlater, liked}, userLoggedIn, dispatch, showPlaylistModal, setShowPlaylistModal, setToastDelay} = useMain();
+    
+    const {state: {videos, watchlater, liked}, utilsState: {userLoggedIn, showPlaylistModal}, dispatch, utilsDispatch} = useMain();
     let navigate = useNavigate();
     const [singleVideoFetchRes, setSingleVideoFetchRes] = useState('');
 
@@ -51,13 +52,13 @@ function SinglePageVideo() {
     }
 
     const playlistOptionHandler = () => {
-        userLoggedIn ? setShowPlaylistModal(prev => !prev) : navigate("/signup")
+        userLoggedIn ? utilsDispatch({type: "SHOW_PLAYLIST_MODAL", payload: !showPlaylistModal}) : navigate("/signup")
     }
 
     const copyCurrentHref = () => {
         navigator.clipboard.writeText(window.location.href);
         toast.success('Link copied to clipboard!');
-        setToastDelay(1500)
+        utilsDispatch({type: "TOAST_DELAY", payload: 1500});
     }
 
     const fetchSingleVideo = async ()=> {

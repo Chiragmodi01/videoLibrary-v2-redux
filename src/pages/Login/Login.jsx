@@ -8,7 +8,7 @@ import {BsEyeFill, BsEyeSlashFill} from '../../utils/getIcons'
 
 function Login() {
   const { userData, setUserData, rePassword, setRePassword, submitUserData, guestLogin } = verifyForm();
-  const {userSignedIn, userLoggedIn, showPassword, setShowPassword} = useMain();
+  const { utilsState: {userSignedIn, userLoggedIn, showPassword}, utilsDispatch} = useMain();
 
   const IconShowPass = showPassword ? BsEyeFill : BsEyeSlashFill;
 
@@ -25,7 +25,7 @@ function Login() {
                 <label htmlFor="password" className="form-label">
                 <span className="form-label-span">Pasword</span>
                     <input required value={userData.password} autoComplete="on" type={showPassword ? "text" : "password"} className="form-input" id="password" onChange={(e) => setUserData({...userData, password: e.target.value})} />
-                    <IconShowPass title={showPassword ? "Hide password" : "Show password"} className='icon-pass cursor-pointer' size="1.3em" onClick={() => setShowPassword(prev => !prev)}/>
+                    <IconShowPass title={showPassword ? "Hide password" : "Show password"} className='icon-pass cursor-pointer' size="1.3em" onClick={() => utilsDispatch({type: "SHOW_PASSWORD", payload: !showPassword})}/>
                 </label>
                 <label htmlFor="re-password" className="form-label">
                 <span className="form-label-span">Confirm Pasword</span>

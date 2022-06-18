@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 function verifyForm() {
-    const {setToastDelay, userSignedIn, setUserSignedIn, setUserLoggedIn} = useMain();
+    const {utilsState: {userSignedIn}, utilsDispatch} = useMain();
     let navigate = useNavigate();
     const getLocalToken = localStorage.getItem("token");
 
@@ -28,7 +28,7 @@ function verifyForm() {
                 const res = await axios.post("/api/auth/signup", userData);
                 localStorage.setItem("token", res.data.encodedToken);
                 navigate("/login", {replace: true})
-                setUserSignedIn(true);
+                utilsDispatch({type: "USER_SIGNED_IN", payload: true})
                 toast.success('User successfully Signed In')
               } catch(e) {
                 console.log(e.message);
@@ -41,7 +41,7 @@ function verifyForm() {
             try {
                 const res = await axios.post("/api/auth/login", userData);
                 navigate("/", {replace: true})
-                setUserLoggedIn(true);
+                utilsDispatch({type: "USER_LOGGED_IN", payload: true})
                 toast.success('User successfully Logged In')
               } catch(e) {
                 console.log(e.message);
@@ -55,7 +55,7 @@ function verifyForm() {
         try {
             const res = await axios.post("/api/auth/login", defaultUserData);
             navigate("/", {replace: true})
-            setUserLoggedIn(true);
+            utilsDispatch({type: "USER_LOGGED_IN", payload: true})
             localStorage.setItem("token", res.data.encodedToken);
             toast.success('Guest User successfully Logged In')
           } catch(e) {
@@ -66,7 +66,7 @@ function verifyForm() {
 
       const logoutSubmitHandler = async() => {
         localStorage.clear();
-        setUserLoggedIn(false);
+        utilsDispatch({type: "USER_LOGGED_IN", payload: false})
         toast.success('User successfully Logged Out')
     }
 
@@ -78,18 +78,18 @@ function verifyForm() {
 
         if (!userData.email.match(emailRegex)) {
             toast.error('Invalid Email!')
-            setToastDelay(2500);
+            utilsDispatch({type: "TOAST_DELAY", payload: 2500})
             setUserData({...userData, email: ""});
         }
         else if(!userData.password.match(passRegex)) {
             toast.error('Password should be 6-20 characters long and contain at least one numeric digit, one special characters, one uppercase and one lowercase letter ');
-            setToastDelay(5000);
+            utilsDispatch({type: "TOAST_DELAY", payload: 5000})
             setUserData({...userData, password: ""});
             setRePassword('');
         }
         else if(userData.password !== rePassword) {
             toast.error('Password is not matching');
-            setToastDelay(2500);
+            utilsDispatch({type: "TOAST_DELAY", payload: 2500})
         } else {
             {userSignedIn ? loginSubmitHandler() : signupSubmitHandler()}
             setUserData({...userData, email: "", password: ""});

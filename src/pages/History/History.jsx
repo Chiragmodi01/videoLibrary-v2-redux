@@ -7,7 +7,7 @@ import { deleteAllFromHistory } from '../../helpers/services/deleteAllFromHistor
 import { toast } from 'react-toastify';
 
 function History() {
-  const {state, dispatch, incognito} = useMain();
+  const {state, dispatch, utilsState: {incognito}} = useMain();
 
   const clearHistory = () => {
     if(state.history.length !== 0) {

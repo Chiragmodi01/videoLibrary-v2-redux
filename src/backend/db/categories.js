@@ -48,7 +48,7 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Lex Clips"
+    categoryName: "CaseyNeistat"
   },
   {
     _id: uuid(),

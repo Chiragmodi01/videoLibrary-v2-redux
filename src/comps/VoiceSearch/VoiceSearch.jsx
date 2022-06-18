@@ -3,9 +3,12 @@ import "./VoiceSearch.css";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import {IoMdMic} from '../../utils/getIcons'
 import {loading} from '../../assets/svgs';
+import { useMain } from '../../helpers/context/main-context';
 
-function VoiceSearch({setSearchQuery}) {
+function VoiceSearch( ) {
   const {listening, transcript, resetTranscript} = useSpeechRecognition();
+  const {utilsDispatch} = useMain();
+
   const [voiceMode, setVoiceMode] = useState(false);
 
   const voiceSearchHandler = () => {
@@ -19,7 +22,7 @@ function VoiceSearch({setSearchQuery}) {
   }
 
   useEffect(() => {
-    transcript && setSearchQuery(transcript);
+    transcript && utilsDispatch({type: "SEARCH_QUERY", payload: transcript});
   }, [transcript])
 
   return (

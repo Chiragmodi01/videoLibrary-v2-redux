@@ -4,7 +4,7 @@ import {StyledChip} from '../../styledComps/index'
 import { useMain } from '../../helpers/context/main-context';
 
 function Navpills() {
-  const {state, loading, dispatch} = useMain();
+  const {state, dispatch, utilsState:{loading}} = useMain();
   const [isChipActive, setIsChipActive] = useState('')
 
   const isCategoryMatches = (category) => {

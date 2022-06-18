@@ -5,7 +5,7 @@ import { useMain } from '../../helpers/context/main-context';
 import {PlaylistsModal, PlaylistCard} from '../../comps';
 
 function Playlist() {
-  const {state, showPlaylistModal, setShowPlaylistModal} = useMain();
+  const {state, utilsState: {showPlaylistModal}, utilsDispatch} = useMain();
 
   let dateString = new Date().toDateString();    
   const currentDate = dateString.split(' ').slice(0, 2).join(', ');
@@ -13,7 +13,7 @@ function Playlist() {
 
 
   const createPlaylistService = () => {
-    setShowPlaylistModal(prev => !prev);
+    utilsDispatch({type: "SHOW_PLAYLIST_MODAL", payload: !showPlaylistModal});
   }
 
   return (

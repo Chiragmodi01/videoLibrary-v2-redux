@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {useMain} from '../../helpers/context/main-context';
 
 function Toast() {
-    const {lightTheme, toastDelay} = useMain();
+    const {utilsState: {lightTheme, toastDelay}} = useMain();
 
   return (
      <ToastContainer
