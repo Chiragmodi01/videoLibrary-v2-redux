@@ -1,4 +1,3 @@
-import React, { useState }  from 'react'
 import './Navbar.css'
 import {useMain} from '../../helpers/context/main-context';
 import {MdOutlineFlipCameraIos, IoIosMenu, IoSearchOutline, CgProfile, BiDotsVerticalRounded, BsMoon, BsSun, IoIosArrowForward, AiOutlineLogout, MdFaceRetouchingOff, MdFace, IoMdClose} from '../../utils/getIcons';
@@ -114,7 +113,7 @@ function Navbar({toggleDropdownRef}) {
           <BiDotsVerticalRounded className="icon-dots cursor-pointer" size="1.5em" title="Settings" onClick={() => utilsDispatch({type:"SHOW_DROPDOWN", payload: !showDropdown})} />
           <StyledDropdown ref={toggleDropdownRef} className={showDropdown ? 'flex settings-dropdown' : 'no-display'}>
             <ul className="dropdown-menu">
-              <li className="menu-item flex-centered cursor-pointer" onClick={() => utilsDispatch({type:"LIGHT_THEME", payload: lightTheme})}>
+              <li className="menu-item flex-centered cursor-pointer" onClick={() => utilsDispatch({type:"LIGHT_THEME", payload: !lightTheme})}>
                 <span className="menu-item-icon">
                  {!lightTheme ? <BsSun size="1.3em" /> : <BsMoon size="1.3em" />}
                 </span>
