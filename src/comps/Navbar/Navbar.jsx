@@ -13,7 +13,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 function Navbar({toggleDropdownRef}) {
   const { state, dispatch,
-    utilsState:{searchQuery, setHideMenu, onMobile, showDropdown, lightTheme, userSignedIn, userLoggedIn, incognito},
+    utilsState:{searchQuery, onMobile, showDropdown, lightTheme, userSignedIn, userLoggedIn, incognito, hideMenu},
     utilsDispatch} = useMain();
 
   const {logoutSubmitHandler} = verifyForm();
@@ -78,7 +78,7 @@ function Navbar({toggleDropdownRef}) {
   return (
     <div className='Navbar'>
       <div className="nav-left flex-centered">
-        <IoIosMenu className={onMobile ? "no-display" : "ham-icon"} size='1.8em' onClick={(() => setHideMenu(prev => !prev))}/>
+        <IoIosMenu className={onMobile ? "no-display" : "ham-icon"} size='1.8em' onClick={(() => utilsDispatch({type: "HIDE_MENU", payload: !hideMenu}))}/>
         <Link to="/" className="brand flex-centered gap-1">
           <span className="brand-logo">
             <img src="/assets/brand-logo.png" alt="brand-logo" className="brand-logo-img" />
