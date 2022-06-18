@@ -9,7 +9,7 @@ import {useOnClickOutside} from '../../utils/onClickOutside';
 
                
 function Video({channelImg, video, title, channel, timesAgo, timeLength, views}) {
-    const {hideMenu, dispatch, userLoggedIn, incognito, setHideMenu} = useMain();
+    const { utilsState:{hideMenu, userLoggedIn, incognito}, dispatch, utilsDispatch} = useMain();
     const [showOptions, setShowOptions] = useState(false);
     const [isHoverVideoPlaying, setIsHoverVideoPlaying] = useState(false);
     const [changeTextOnHover, setChangeTextOnHover] = useState(false);
@@ -22,7 +22,7 @@ function Video({channelImg, video, title, channel, timesAgo, timeLength, views})
 
     const videoHandler = () => {
         navigate(`/video/${video._id}`);
-        setHideMenu(true);
+        utilsDispatch({type: "HIDE_MENU", payload: true});
         if(userLoggedIn) {
           if(!incognito) {
               pathname === "/" && historyVideoService(dispatch, video);

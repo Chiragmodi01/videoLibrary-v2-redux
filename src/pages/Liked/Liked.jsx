@@ -5,7 +5,7 @@ import { useMain } from '../../helpers/context/main-context';
 import {PlaylistsModal, Video} from '../../comps';
 
 function Liked() {
-  const {state, showPlaylistModal} = useMain();
+  const {state, utilsState: {showPlaylistModal}} = useMain();
 
   let dateString = new Date().toDateString();    
   const currentDate = dateString.split(' ').slice(0, 2).join(', ');

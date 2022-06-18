@@ -5,7 +5,7 @@ import {AiFillHome, AiOutlineHome, AiFillClockCircle, AiOutlineHistory, AiOutlin
 import { useMain } from '../../helpers/context/main-context';
 
 function FooterNav() {
-  const {onMobile, userLoggedIn} = useMain()
+  const {utilsState} = useMain()
   let {pathname} = useLocation();
   let navigate = useNavigate();
 
@@ -16,13 +16,13 @@ function FooterNav() {
 
   const navigateToSignup = () => {
     setTimeout(() => {
-      !userLoggedIn && navigate("/signup")
+      !utilsState.userLoggedIn && navigate("/signup")
     }, 0)
   }
 
   
   return (
-    <div className={onMobile ? 'FooterNav' : 'no-display'}>
+    <div className={utilsState.onMobile ? 'FooterNav' : 'no-display'}>
       <div className="footerNav-container">
         <NavLink to="/" className="footerNav-menu flex">
           <IconHome className='menu-icon' size='1.8em'/>

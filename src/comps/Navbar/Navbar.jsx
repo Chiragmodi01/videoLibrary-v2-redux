@@ -12,22 +12,29 @@ import { useOnClickOutside } from '../../utils/onClickOutside';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function Navbar({toggleDropdownRef}) {
-  const { state, dispatch, searchQuery, setSearchQuery, setHideMenu, onMobile, showDropdown, setShowDropdown, setLightTheme, lightTheme, userSignedIn, userLoggedIn, incognito, setIncognito, setToastDelay } = useMain();
+  const { state, dispatch,
+    utilsState:{searchQuery, setHideMenu, onMobile, showDropdown, lightTheme, userSignedIn, userLoggedIn, incognito},
+    utilsDispatch} = useMain();
+
   const {logoutSubmitHandler} = verifyForm();
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchSuggestionsRef = useOnClickOutside(() => setShowSuggestions(false), showSuggestions)
+
   let {pathname} = useLocation();
+
   let navigate = useNavigate();
+
   const [changeAvatar, setChangeAvatar] = useState(false);
+  
   const setIncognitoMode = () => {
     if(incognito) {
-      setToastDelay(2500);
+      utilsDispatch({type:"TOAST_DELAY", payload: 2500});
       toast.info("Incognito mode turned off! Your history will be tracked!");
-      setIncognito(prev => !prev)
+      utilsDispatch({type:"INCOGNITO", payload: !incognito});
     } else {
-      setToastDelay(3700);
+      utilsDispatch({type:"TOAST_DELAY", payload: 3700});
       toast.info("You are browsing in Incognito mode now! Your history won't be tracked!");
-      setIncognito(prev => !prev)
+      utilsDispatch({type:"INCOGNITO", payload: !incognito});
     }
   }
 
@@ -39,7 +46,7 @@ function Navbar({toggleDropdownRef}) {
     if(searchQuery === '' || searchQuery.length === 0) {
       dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});
       toast.warning('Searchbox is empty!');
-      setToastDelay(1000);
+      utilsDispatch({type:"TOAST_DELAY", payload: 1000});
     } else {
       dispatch({type: 'FILTER_BY_SEARCH', payload: searchQuery});
       pathname !== "/" && navigate("/");
@@ -47,7 +54,7 @@ function Navbar({toggleDropdownRef}) {
   }
 
   const searchOnChangeHandler = (e) => {
-    setSearchQuery(e.target.value);
+    utilsDispatch({type:"SEARCH_QUERY", payload: e.target.value});
     if(searchQuery === '') {
       dispatch({type: 'EMPTY_SEARCH_SUGGESTIONS', payload: searchQuery});
       setShowSuggestions(false);
@@ -58,13 +65,13 @@ function Navbar({toggleDropdownRef}) {
   }
 
   const searchSuggestionClickHandler = (suggestion) => {
-    setSearchQuery(suggestion.title);
+    utilsDispatch({type:"SEARCH_QUERY", payload: suggestion.title});
     setShowSuggestions(false);
     dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});
   }
 
   const clearForm = () => {
-    setSearchQuery('');
+    utilsDispatch({type:"SEARCH_QUERY", payload: ''});
     dispatch({type: 'EMPTY_FILTERED_ARRAY', payload: searchQuery});
   }
 
@@ -86,7 +93,7 @@ function Navbar({toggleDropdownRef}) {
             <IoSearchOutline className="icon-search" size='1.5em' title="Search"/>
             {searchQuery && <IoMdClose type="reset" onClick={clearForm} className='icon-close-search' size="1em"/>}
           </button>
-          <VoiceSearch setSearchQuery={setSearchQuery} />
+          <VoiceSearch />
           {showSuggestions && <div className="search-suggestion-wrapper flex-centered flex-col">
             <ul>
               {
@@ -104,10 +111,10 @@ function Navbar({toggleDropdownRef}) {
         </form>
       </div>}
       <div className="nav-right flex-centered">
-          <BiDotsVerticalRounded className="icon-dots cursor-pointer" size="1.5em" title="Settings" onClick={() => setShowDropdown(prev => !prev)} />
+          <BiDotsVerticalRounded className="icon-dots cursor-pointer" size="1.5em" title="Settings" onClick={() => utilsDispatch({type:"SHOW_DROPDOWN", payload: !showDropdown})} />
           <StyledDropdown ref={toggleDropdownRef} className={showDropdown ? 'flex settings-dropdown' : 'no-display'}>
             <ul className="dropdown-menu">
-              <li className="menu-item flex-centered cursor-pointer" onClick={() => setLightTheme(prev => !prev)}>
+              <li className="menu-item flex-centered cursor-pointer" onClick={() => utilsDispatch({type:"LIGHT_THEME", payload: lightTheme})}>
                 <span className="menu-item-icon">
                  {!lightTheme ? <BsSun size="1.3em" /> : <BsMoon size="1.3em" />}
                 </span>

@@ -1,36 +1,24 @@
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import axios from 'axios';
 import { videoReducer } from "../reducer/videoReducer";
+import { utilsReducer } from "../reducer/utilsReducer";
 
 const MainContext = createContext();
 
 function MainProvider({ children }) {
-    const [hideMenu, setHideMenu] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const [onMobile, setOnMobile] = useState(false);
-    const [showDropdown, setShowDropdown] = useState(false);
-    const [lightTheme, setLightTheme] = useState(false);
-    const [toastDelay, setToastDelay] = useState(2500);
-    const [userSignedIn, setUserSignedIn] = useState(false);
-    const [userLoggedIn, setUserLoggedIn] = useState(false);
-    const [incognito, setIncognito] = useState(false);
-    const [showPlaylistModal, setShowPlaylistModal] = useState(false);
-    const [showPassword, setShowPassword] = useState(false);
-    const [addPlaylistInput, setAddPlaylistInput] = useState('');
-    const [searchQuery, setSearchQuery] = useState('');
 
     window.addEventListener('resize', MatchMedia);
 
     function MatchMedia () {
         if (window.matchMedia("(min-width: 700px) and (max-width: 1000px)").matches) {  
-            setHideMenu(true);
-            setOnMobile(false);
+            utilsDispatch({type: 'HIDE_MENU', payload: true});
+            utilsDispatch({type: 'MOBILE_VIEW', payload: false});
         } else if (window.matchMedia("(max-width: 700px)").matches) {  
-            setHideMenu(false);
-            setOnMobile(true);
+            utilsDispatch({type: 'HIDE_MENU', payload: false});
+            utilsDispatch({type: 'MOBILE_VIEW', payload: true});
         } else {
-            setHideMenu(false);
-            setOnMobile(false);
+            utilsDispatch({type: 'HIDE_MENU', payload: false});
+            utilsDispatch({type: 'MOBILE_VIEW', payload: false});
         }
     }
 
@@ -40,28 +28,28 @@ function MainProvider({ children }) {
 
     const fetchData = async ()=> {
         try {
-            setLoading(true);
+            dispatch({ type: 'LOADING', payload: true})
             const res = await axios.get('/api/videos')
             dispatch({ type: 'FETCH_DATA', payload: res.data.videos})
         } catch (e) {
             console.error(e);
         } finally {
             setTimeout(() => {
-                setLoading(false);
+                utilsDispatch({type: 'LOADING', payload: false});
             }, 1500)
         }
     }
 
     const fetchCategories = async ()=> {
         try {
-            setLoading(true);
+            utilsDispatch({type: 'LOADING', payload: true});
             const res = await axios.get('/api/categories')
             dispatch({ type: 'FETCH_CATEGORIES', payload: res.data.categories})
         } catch (e) {
             console.error(e);
         } finally {
             setTimeout(() => {
-                setLoading(false);
+                utilsDispatch({type: 'LOADING', payload: false});
             }, 1500)
         }
     }
@@ -70,6 +58,22 @@ function MainProvider({ children }) {
         fetchData();
         fetchCategories();
     }, []);
+
+    const [utilsState, utilsDispatch] = useReducer(utilsReducer, {
+        hideMenu: false,
+        loading: false,
+        onMobile: false,
+        showDropdown: false,
+        lightTheme: false,
+        toastDelay: 2500,
+        userSignedIn: false,
+        userLoggedIn: false,
+        incognito: false,
+        showPlaylistModal: false,
+        showPassword: false,
+        addPlaylistInput :'',
+        searchQuery :'',
+    })    
 
     
     const [state, dispatch] = useReducer(videoReducer, {
@@ -84,7 +88,7 @@ function MainProvider({ children }) {
     })    
 
     return (
-        <MainContext.Provider value={{hideMenu, setHideMenu, loading, state, dispatch, onMobile, showDropdown, setShowDropdown, lightTheme, setLightTheme, toastDelay, setToastDelay, userSignedIn, setUserSignedIn, userLoggedIn, setUserLoggedIn, incognito, setIncognito, showPlaylistModal, setShowPlaylistModal, showPassword, setShowPassword, addPlaylistInput, setAddPlaylistInput, searchQuery, setSearchQuery}}>
+        <MainContext.Provider value={{state, dispatch, utilsState, utilsDispatch}}>
             {children}
         </MainContext.Provider>
     )

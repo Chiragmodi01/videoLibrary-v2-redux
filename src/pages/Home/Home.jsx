@@ -4,7 +4,7 @@ import {TempCard, Video} from '../../comps/index'
 import './Home.css'
 
 function Home() {
-  const {loading, state} = useMain();
+  const {utilsState: {loading}, state} = useMain();
 
   return (
     <div className='Home'>

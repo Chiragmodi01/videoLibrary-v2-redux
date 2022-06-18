@@ -6,7 +6,7 @@ import { useMain } from '../../helpers/context/main-context';
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 function Sidebar() {
-  const { hideMenu, onMobile, userLoggedIn} = useMain();
+  const { utilsState: { hideMenu, onMobile, userLoggedIn }} = useMain();
   let navigate = useNavigate();
   const {pathname} = useLocation();
   const IconHome = pathname === "/" ? AiFillHome : AiOutlineHome;
