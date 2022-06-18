@@ -9,6 +9,7 @@ import {toast} from 'react-toastify';
 import {incognitoFace} from '../../assets/svgs';
 import { useOnClickOutside } from '../../utils/onClickOutside';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function Navbar({toggleDropdownRef}) {
   const { state, dispatch,
