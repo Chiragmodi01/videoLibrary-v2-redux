@@ -35,19 +35,19 @@
     category: 'Avicii'
   },
   {
-    _id: "60KJz1BVTyU",
-    title: "Jack Dorsey | Lex Fridman Podcast #91",
+    _id: "gnHCw87Enq4",
+    title: "MY FIRST VLOG",
     description:
-      "Jack Dorsey is the co-founder and CEO of Twitter and the founder and CEO of Square.",
-    channel: "Lex Fridman",
+      "Hi, I live in New York City and love YouTube.",
+    channel: "CaseyNeistat",
     timesAgo: "Apr 25,2020",
-    timeLength: "51:13",
+    timeLength: "21:13",
     channelJoined: "Sep 20, 2006",
     channelViews: "1,826,453",
     views: "673k",
     subscribers: "1.71M",
-    channelImg: "AKedOLSGy59de1aPzperNr4l25o_ZUKMCsDarZWmQ24cSgE",
-    category: 'Lex Fridman'
+    channelImg: "AKedOLRvLZ1G7-q4xH6sT8mGQho6jGWmL6gs7v1Ud4F5fw",
+    category: 'CaseyNeistat'
   },
   {
     _id: "RcYjXbSJBN8",
@@ -144,7 +144,7 @@
     title: "Jordan Peterson and Glenn Loury: IQ differences between racial groups",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "John Doe",
+    channel: "Lex Fridman",
     timesAgo: "15 hours ago",
     timeLength: "12:11",
     channelJoined: "Nov 17, 2019",
@@ -152,7 +152,7 @@
     views: "9.4k views",
     subscribers: "597K",
     channelImg: "AKedOLQ7TSUR7ber65I8J7QRgzUsEjJ01GitgCUZgcQM",
-    category: 'Lex Clips'
+    category: 'Lex Fridman'
   },
   {
     _id: "vQcCNpuaJO8",
@@ -204,7 +204,7 @@
     title: "How to focus | Andrew Huberman and Lex Fridman",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    channel: "John Doe",
+    channel: "Lex Fridman",
     timesAgo: "5 hours ago",
     timeLength: "10:42",
     channelJoined: "Nov 17, 2019",
@@ -212,7 +212,7 @@
     views: "9.4k views",
     subscribers: "597K",
     channelImg: "AKedOLQ7TSUR7ber65I8J7QRgzUsEjJ01GitgCUZgcQM",
-    category: 'Lex Clips'
+    category: 'Lex Fridman'
   },
   {
     _id: "ZvbzSrg0afE",
